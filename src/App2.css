@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6 .logo-text{
   }
   /* Navbar Styles */
   nav.navbar {
-    padding: 18px 0;
+    padding: 5px 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -30,19 +30,19 @@ h1, h2, h3, h4, h5, h6 .logo-text{
     height: 50px;
   }
   
-  nav.navbar a.navbar-brand {
+  nav.navbar .container .navbar-brand {
     display: flex;
     align-items: center;
     padding: 0 15px;
   }
   
-  nav.navbar a.navbar-brand img {
+  nav.navbar .container .navbar-brand img {
     width: auto;
-    height: 50px; /* Adjust this value to resize the logo */
-    margin-right: 10px; /* Add space between logo and text */
+    height: 50px; /* Resize the logo */
+    margin-right: 10px;
   }
   
-  nav.navbar a.navbar-brand .logo-text {
+  nav.navbar .container a.navbar-brand .logo-text {
     color: #ffffff; /* White text color */
     font-size: 24px; /* Adjust font size as needed */
     font-weight: 150; /* Bold text */
@@ -55,71 +55,127 @@ h1, h2, h3, h4, h5, h6 .logo-text{
   
   nav.navbar.scrolled a.navbar-brand .logo-text  .nav-link{
     font-size: 20px;
+    font-family: "Rationale", sans-serif;
   }
   
-  nav.navbar a.navbar-brand .logo-text:hover {
-    color: white;
+  nav.navbar .container a.navbar-brand .logo-text:hover {
+    color: rgb(0, 92, 145);
   }
+  /* Navbar Toggle Button Styles */
+nav.navbar .container .navbar-toggler {
+ 
+  margin-top: auto;
+  margin-bottom: auto;
   
-  .navbar-toggler {
-    border-color: #fff;
-  }
-  
-  .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-  }
+}
+
+nav.navbar .container .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Hover Styling for LinkContainer in Nav */
+nav.navbar .nav-link {
+  color: #d3d3d3 !important;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav.navbar .nav-link:hover {
+  color: rgb(0, 92, 145) !important; /* White color on hover */
+}
+
   
   .nav-link, .nav-dropdown {
     color: #d3d3d3 !important;
   }
   
-  .navbar-collapse {
+  /* .navbar-collapse {
     justify-content: flex-end;
+  } */
+  nav.navbar .dropdown-item {
+    color: #000000 !important; /* Light text color */
+    font-size: 1rem; /* Font size for dropdown items */
+    padding: 0.5rem 1rem; /* Adjust padding as needed */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth hover transition */
+  }
+  
+  nav.navbar .dropdown-item:hover {
+    color: #ffffff !important; /* White text on hover */
+    background-color: #000000 !important; /* Blue background on hover */
+  }
+  
+  /* Style for the dropdown menu container */
+  nav.navbar .dropdown-menu {
+    background-color: rgb(255, 255, 255); /* Black background for dropdown menu */
+    border: none; /* Remove border */
   }
   
   /* Responsive Navbar */
   @media (max-width: 768px) {
-    .navbar {
+    nav.navbar {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 50px;
-    }
-    .navbar-collapse {
-      justify-content: center;
-    }
-    
-    .navbar .navbar-brand {
-      font-size: 1rem;
-    }
-    .navbar .navbar-brand,
-    .navbar .navbar-toggler {
-      margin-bottom: auto;
-      margin-top: auto;
       
     }
-    .navbar .nav-link {
-      font-size: 1rem;
-      color: #fff !important;
+    nav.navbar .container {
+      max-width: 100%; /* Allow full-width to prevent constraint */
+      padding: 0 15px; /* Adjust side padding as needed */
+      
+    }
+    nav.navbar .navbar-collapse {
+      background-color: rgb(255, 255, 255); /* Black background for the entire toggler menu */
+      max-width: 250px; /* Set a specific width for the expanded menu */
+      margin: 0 auto; /* Center the menu horizontally */
+      border-radius: 8px; /* Optional: Add rounded corners */
+      padding: 1rem;
+      border-color: #000000;
     }
   
-    .navbar .nav-item {
+    
+    nav.navbar .container .navbar-brand {
+      font-size: 1rem;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    nav.navbar .container .navbar-toggler {
+      padding: 0.5rem;
+      margin-top: auto;
+      margin-bottom: auto;
+      
+      
+    }
+    
+    nav.navbar .nav-link {
+      font-size: 1rem;
+      color: #000000 !important;
+    }
+    nav.navbar .nav-link {
+      font-size: 1rem;
+      color: #000000 !important;
+    }
+    
+  
+    nav.navbar .nav-item {
       margin: 0.5rem 0;
     }
     
-    .navbar .dropdown-menu {
-      background-color: black;
+    
+    nav.navbar .dropdown-menu {
+      background-color: rgb(0, 0, 0);
     }
   
-    .dropdown-item {
+   
+    nav.navbar .dropdown-item {
+      font-size: 0.95rem;
+      padding: 0.4rem 0.8rem;
       color: #d3d3d3 !important;
     }
   
-    .dropdown-item:hover {
-      background-color: #007bff !important;
-      color: #fff !important;
-    }
+    
   }
+  
   
   .banner {
     margin-top: 0;
@@ -192,8 +248,65 @@ h1, h2, h3, h4, h5, h6 .logo-text{
       transform: translateY(-20px);
     }
   }
-  /* About Section Styling */
+  /* Styling for the container_about section */
 .container_about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 2rem 0;
+  padding: 2rem;
+
+  border-radius: 12px;
+  background-color: #f0f8ff;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.1);
+}
+.container_about:hover{
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  background-color: black; /* Changes background to black on hover */
+}
+.container_about:hover h2,
+.container_about:hover h3,
+.container_about:hover p {
+  color: white; /* Changes all text to white on hover */
+}
+.container_about1:hover{
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  background-color: black; /* Changes background to black on hover */
+}
+.container_about1:hover h2,
+.container_about1:hover h3,
+.container_about1:hover p {
+  color: white; /* Changes all text to white on hover */
+}
+
+.container_about .container_text {
+  max-width: 80%;
+  text-align: center;
+}
+
+.container_about h2 {
+  color: #000000;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.container_about h3 {
+  color: #000000;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.container_about p {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Styling for the container_about1 section */
+.container_about1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -202,32 +315,33 @@ h1, h2, h3, h4, h5, h6 .logo-text{
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.container_text {
+.container_about1 .container_text {
   max-width: 60%;
   padding-right: 1.5rem;
 }
 
-.container_text h2 {
+.container_about1 h2 {
   color: #333;
   font-size: 2rem;
   margin-bottom: 0.5rem;
 }
 
-.container_text h3 {
-  color: #007bff;
+.container_about1 h3 {
+  color: #000000;
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
-.container_text p {
+.container_about1 p {
   color: #555;
   font-size: 1rem;
   line-height: 1.6;
-  margin-bottom: 1rem;
 }
 
+/* Styling for images in container_about1 */
 .container_image {
   max-width: 35%;
   height: auto;
@@ -235,30 +349,28 @@ h1, h2, h3, h4, h5, h6 .logo-text{
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Adjustments */
+/* Responsive styling */
 @media (max-width: 992px) {
+  .container_about1,
   .container_about {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding: 1rem;
   }
 
-  .container_text {
+  .container_about1 .container_text,
+  .container_about .container_text {
     max-width: 100%;
+    text-align: center;
     padding-right: 0;
-    text-align: left;
   }
 
-  .container_text h2 {
+  .container_about h2, .container_about1 h2 {
     font-size: 1.8rem;
   }
 
-  .container_text h3 {
+  .container_about h3, .container_about1 h3 {
     font-size: 1.3rem;
-  }
-
-  .container_text p {
-    font-size: 0.95rem;
   }
 
   .container_image {
@@ -268,19 +380,23 @@ h1, h2, h3, h4, h5, h6 .logo-text{
 }
 
 @media (max-width: 576px) {
-  .container_about {
+  .container {
+    padding: 1rem;
+  }
+
+  .container_about, .container_about1 {
     padding: 0.5rem;
   }
 
-  .container_text h2 {
+  .container_about .container_text h2, .container_about1 .container_text h2 {
     font-size: 1.5rem;
   }
 
-  .container_text h3 {
+  .container_about .container_text h3, .container_about1 .container_text h3 {
     font-size: 1.1rem;
   }
 
-  .container_text p {
+  .container_about .container_text p, .container_about1 .container_text p {
     font-size: 0.9rem;
   }
 
@@ -289,32 +405,122 @@ h1, h2, h3, h4, h5, h6 .logo-text{
   }
 }
 
-  /* Services Section */
-  .services .card {
-    border: none;
-    text-align: center;
+/* Services Section */
+.container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.container h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #333;
+}
+/* Row and Column adjustments for layout */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Card Styling with Hover Effect */
+.card {
+  border: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  text-align: center;
+  background-color: white;
+  overflow: hidden;
+  text-decoration: none; /* Remove underline from link styling */
+  color: inherit; /* Inherit color for link */
+  padding-top: 1.5rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  background-color: #000000;
+}
+
+/* Card Image Styling */
+.card .card-img-top {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Circular image */
+  object-fit: cover;
+  margin: 0 auto 1rem auto; /* Center the image */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.card:hover.card-img-top {
+  transform: scale(1.1); /* Slightly enlarge image on hover */
+  filter: brightness(1.2); /* Brighten image on hover */
+}
+
+/* Title Styling */
+.card .card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #000000;
+  margin-top: 1rem;
+  transition: color 0.3s ease;
+  font-family: "Rationale", sans-serif;
+}
+
+.card:hover .card-title {
+  color: #ffffff;
+}
+
+/* Responsive Styling */
+@media (max-width: 992px) {
+  .col-md-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
   }
-  
-  .services .card-title {
-    font-size: 1.25rem;
-    color: #333;
-    margin-bottom: 0.5rem;
+
+  .container h2 {
+    font-size: 2rem;
   }
-  
-  .services .card-body {
-    padding: 1.5rem;
+
+  .card-title {
+    font-size: 1.15rem;
   }
-  
-  .services .btn-primary {
-    background-color: #007bff;
-    border: none;
+}
+
+@media (max-width: 768px) {
+  .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
-  
-  @media (max-width: 768px) {
-    .services .card-title {
-      font-size: 1rem;
-    }
+
+  .container h2 {
+    font-size: 1.75rem;
   }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .container h2 {
+    font-size: 1.5rem;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+}
+
   
   /* Contact Form */
   .contact form {

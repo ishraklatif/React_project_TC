@@ -13,7 +13,7 @@ function About() {
         </p>
       </div>
       </div>
-      <div className="container_about">
+      <div className="container_about1">
       <div className="container_text">
         <h2>Why Us?</h2>
         <h3>Customized Solutions</h3>
@@ -23,7 +23,7 @@ function About() {
       </div>
       <img className="container_image" src={headerImg} alt="alt3" />
     </div>
-    <div className="container_about">
+    <div className="container_about1">
       <div className="container_text">
         <h2>Why Us?</h2>
         <h3>We Reach Globally</h3>
