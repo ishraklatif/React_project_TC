@@ -561,4 +561,565 @@ nav.navbar .nav-link:hover {
       font-size: 0.9rem;
     }
   }
+  /* ITES Section */
+.ites-section .ites-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.ites-section .ites-container h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* Row and Column adjustments for layout */
+.ites-section .ites-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ites-section .ites-col {
+  flex: 0 0 33.333%;
+  max-width: 33.333%;
+}
+
+/* Card Styling with Hover Effect */
+.ites-section .ites-card {
+  border: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  text-align: center;
+  background-color: white;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  padding-top: 1.5rem;
+}
+
+.ites-section .ites-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  background-color: #000000;
+}
+
+/* Icon Styling */
+.ites-section .ites-card .icon {
+  margin-bottom: 1rem;
+}
+
+/* Title Styling */
+.ites-section .ites-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #000000;
+  margin-top: 1rem;
+  transition: color 0.3s ease;
+  font-family: "Rationale", sans-serif;
+}
+
+.ites-section .ites-card:hover .ites-card-title {
+  color: #ffffff;
+}
+
+/* Responsive Styling */
+@media (max-width: 992px) {
+  .ites-section .ites-col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .ites-section .ites-container h2 {
+    font-size: 2rem;
+  }
+
+  .ites-section .ites-card-title {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .ites-section .ites-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .ites-section .ites-container h2 {
+    font-size: 1.75rem;
+  }
+
+  .ites-section .ites-card-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .ites-section .ites-container {
+    padding: 1rem;
+  }
+
+  .ites-section .ites-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .ites-section .ites-card-body {
+    padding: 1rem;
+  }
+
+  .ites-section .ites-card-title {
+    font-size: 1rem;
+  }
+}
+
+
+ 
+
+   /*  BPO Section */
+   .bpo-section .bpo-container {
+    padding: 2rem;
+    text-align: center;
+  }
   
+  .bpo-section .bpo-container h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  /* Row and Column adjustments for layout */
+  .bpo-section .bpo-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .bpo-section .bpo-col {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+  
+  /* Card Styling with Hover Effect */
+  .bpo-section .bpo-card {
+    border: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    text-align: center;
+    background-color: white;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    padding-top: 1.5rem;
+  }
+  
+  .bpo-section .bpo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: #000000;
+  }
+  
+  /* Icon Styling */
+  .bpo-section .bpo-card .icon {
+    margin-bottom: 1rem;
+  }
+  
+  /* Title Styling */
+  .bpo-section .bpo-card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #000000;
+    margin-top: 1rem;
+    transition: color 0.3s ease;
+    font-family: "Rationale", sans-serif;
+  }
+  
+  .bpo-section .bpo-card:hover .bpo-card-title {
+    color: #ffffff;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 992px) {
+    .bpo-section .ites-col {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  
+    .bpo-section .bpo-container h2 {
+      font-size: 2rem;
+    }
+  
+    .bpo-section .bpo-card-title {
+      font-size: 1.15rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .bpo-section .bpo-col {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  
+    .bpo-section .bpo-container h2 {
+      font-size: 1.75rem;
+    }
+  
+    .bpo-section .bpo-card-title {
+      font-size: 1.1rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .bpo-section .bpo-container {
+      padding: 1rem;
+    }
+  
+    .bpo-section .bpo-container h2 {
+      font-size: 1.5rem;
+    }
+  
+    .bpo-section .bpo-card-body {
+      padding: 1rem;
+    }
+  
+    .bpo-section .bpo-card-title {
+      font-size: 1rem;
+    }
+  }
+
+  
+  /* OUTS Section */
+.outs-section .outs-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.outs-section .outs-container h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* Row and Column adjustments for layout */
+.outs-section .outs-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.outs-section .outs-col {
+  flex: 0 0 33.333%;
+  max-width: 33.333%;
+}
+
+/* Card Styling with Hover Effect */
+.outs-section .outs-card {
+  border: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  text-align: center;
+  background-color: white;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  padding-top: 1.5rem;
+}
+
+.outs-section .outs-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  background-color: #000000;
+}
+
+/* Icon Styling */
+.outs-section .outs-card .icon {
+  margin-bottom: 1rem;
+}
+
+/* Title Styling */
+.outs-section .outs-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #000000;
+  margin-top: 1rem;
+  transition: color 0.3s ease;
+  font-family: "Rationale", sans-serif;
+}
+
+.outs-section .outs-card:hover .outs-card-title {
+  color: #ffffff;
+}
+
+/* Responsive Styling */
+@media (max-width: 992px) {
+  .outs-section .outs-col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .outs-section .outs-container h2 {
+    font-size: 2rem;
+  }
+
+  .outs-section .outs-card-title {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .outs-section .outs-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .outs-section .outs-container h2 {
+    font-size: 1.75rem;
+  }
+
+  .outs-section .outs-card-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .outs-section .outs-container {
+    padding: 1rem;
+  }
+
+  .outs-section .outs-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .outs-section .outs-card-body {
+    padding: 1rem;
+  }
+
+  .outs-section .outs-card-title {
+    font-size: 1rem;
+  }
+}
+/*  Tech Section */
+.tech-section .tech-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.tech-section .tech-container h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* Row and Column adjustments for layout */
+.tech-section .tech-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tech-section .tech-col {
+  flex: 0 0 33.333%;
+  max-width: 33.333%;
+}
+
+/* Card Styling with Hover Effect */
+.tech-section .tech-card {
+  border: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  text-align: center;
+  background-color: white;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  padding-top: 1.5rem;
+}
+
+.tech-section .tech-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  background-color: #000000;
+}
+
+/* Icon Styling */
+.tech-section .tech-card .icon {
+  margin-bottom: 1rem;
+}
+
+/* Title Styling */
+.tech-section .tech-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #000000;
+  margin-top: 1rem;
+  transition: color 0.3s ease;
+  font-family: "Rationale", sans-serif;
+}
+
+.tech-section .tech-card:hover .tech-card-title {
+  color: #ffffff;
+}
+
+/* Responsive Styling */
+@media (max-width: 992px) {
+  .tech-section .tech-col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .tech-section .tech-container h2 {
+    font-size: 2rem;
+  }
+
+  .tech-section .tech-card-title {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .tech-section .tech-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .tech-section .tech-container h2 {
+    font-size: 1.75rem;
+  }
+
+  .tech-section .tech-card-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .tech-section .tech-container {
+    padding: 1rem;
+  }
+
+  .tech-section .tech-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .tech-section .tech-card-body {
+    padding: 1rem;
+  }
+
+  .tech-section .tech-card-title {
+    font-size: 1rem;
+  }
+}
+
+/*  PRM Section */
+.prm-section .prm-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.prm-section .prm-container h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* Row and Column adjustments for layout */
+.prm-section .prm-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.prm-section .prm-col {
+  flex: 0 0 33.333%;
+  max-width: 33.333%;
+}
+
+/* Card Styling with Hover Effect */
+.prm-section .prm-card {
+  border: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  text-align: center;
+  background-color: white;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  padding-top: 1.5rem;
+}
+
+.prm-section .prm-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  background-color: #000000;
+}
+
+/* Icon Styling */
+.prm-section .prm-card .icon {
+  margin-bottom: 1rem;
+}
+
+/* Title Styling */
+.prm-section .prm-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #000000;
+  margin-top: 1rem;
+  transition: color 0.3s ease;
+  font-family: "Rationale", sans-serif;
+}
+
+.prm-section .prm-card:hover .prm-card-title {
+  color: #ffffff;
+}
+
+/* Responsive Styling */
+@media (max-width: 992px) {
+  .prm-section .prm-col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .prm-section .prm-container h2 {
+    font-size: 2rem;
+  }
+
+  .prm-section .prm-card-title {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .prm-section .prm-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .prm-section .prm-container h2 {
+    font-size: 1.75rem;
+  }
+
+  .prm-section .prm-card-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .prm-section .prm-container {
+    padding: 1rem;
+  }
+
+  .prm-section .prm-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .prm-section .prm-card-body {
+    padding: 1rem;
+  }
+
+  .prm-section .prm-card-title {
+    font-size: 1rem;
+  }
+}
