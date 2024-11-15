@@ -7,7 +7,7 @@ function NavbarComponent() {
   return (
     <Navbar expand="md" sticky="top" className="navbar">
       <Container>
-        <Navbar.Brand href="#home" className="navbar-brand">
+        <Navbar.Brand href="/" className="navbar-brand">
         <img src={logo} alt="Logo" />
         <span className="logo-text">True Compass</span>
         </Navbar.Brand>

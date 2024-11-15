@@ -1,15 +1,18 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import { FaFacebookSquare } from "react-icons/fa";
+import { RiTwitterXFill } from "react-icons/ri";
+import { FaInstagram } from "react-icons/fa";
 
 function Footer() {
   return (
-    <footer className="bg-dark text-light py-4">
+    <footer>
       <Container className="text-center">
-        <p>© 2023 Company Name. All rights reserved.</p>
+        <p>© 2024 True Compass Ltd. All rights reserved.</p>
         <div>
-          <a href="#facebook" className="text-light mx-2">Facebook</a>
-          <a href="#twitter" className="text-light mx-2">Twitter</a>
-          <a href="#linkedin" className="text-light mx-2">LinkedIn</a>
+          <a href="#facebook"><FaFacebookSquare /></a>
+          <a href="#twitter"><RiTwitterXFill /></a>
+          <a href="#instagram"><FaInstagram /></a>
         </div>
       </Container>
     </footer>

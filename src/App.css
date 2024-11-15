@@ -258,8 +258,8 @@ nav.navbar .nav-link:hover {
   padding: 2rem;
 
   border-radius: 12px;
-  background-color: #f0f8ff;
-  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.1);
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .container_about:hover{
   transform: translateY(-5px);
@@ -522,45 +522,182 @@ nav.navbar .nav-link:hover {
 }
 
   
-  /* Contact Form */
-  .contact form {
-    max-width: 600px;
-    margin: 0 auto;
+/* Contact Section */
+.contact-section {
+  padding: 4rem 0;
+  background-color: #ffffff;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #343a40;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: "Rationale", sans-serif;
+}
+
+.contact-section form {
+  max-width: 700px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-section form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.contact-section .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.contact-section .form-control {
+  border-radius: 10px;
+  border: 1px solid #ced4da;
+  padding: 1rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-section .form-control:focus {
+  border-color: #ffffff;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+.contact-section .btn-primary {
+  background-color: #000000;
+  border: none;
+  border-radius: 5px;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-section .btn-primary:hover {
+  background-color: #252525;
+  transform: translateY(-2px);
+}
+
+.contact-section .btn-primary:focus {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Add subtle hover effect for input fields */
+.contact-section .form-control:hover {
+  border-color: #000000;
+}
+
+/* Add spacing for better readability */
+.contact-section .form-label {
+  font-weight: bold;
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 2rem 1rem;
   }
-  
-  .contact .form-control {
-    border-radius: 0.25rem;
-    margin-bottom: 1rem;
+
+  .contact-section h2 {
+    font-size: 2rem;
   }
-  
-  .contact .btn-primary {
-    background-color: #007bff;
-    border: none;
+
+  .contact-section form {
+    padding: 2rem;
   }
-  
-  /* Footer Styles */
+}
+
+@media (max-width: 576px) {
+  .contact-section {
+    padding: 1rem;
+  }
+
+  .contact-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .contact-section form {
+    padding: 1.5rem;
+  }
+}
+
+/* Footer Section */
+footer {
+  background-color: #000000; /* Sleek dark background */
+  color: #d3d3d3; /* Soft light grey text */
+  padding: 1rem 1rem 0; /* Reduced padding for less height */
+  text-align: center;
+  font-family: 'Rationale', sans-serif;
+  border-top: 3px solid #000000; /* Accent border for separation */
+}
+
+footer:hover {
+  color: #ffffff; /* Highlight effect on hover */
+  transform: translateY(-0.5px);
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer Container Styling */
+footer .text-center {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Footer Text Styling */
+footer p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Social Media Icons */
+footer div a {
+  color: #d3d3d3;
+  font-size: 1.5rem; /* Larger icons */
+  margin: 0 0.8rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer div a:hover {
+  color: #007bff; /* Highlight effect on hover */
+  transform: scale(1.2); /* Slight zoom effect */
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
   footer {
-    background-color: #343a40;
-    color: #d3d3d3;
-    padding: 1.5rem 0;
-    text-align: center;
+    padding: 1rem 0; /* Adjusted padding for smaller screens */
   }
-  
-  footer a {
-    color: #d3d3d3;
-    margin: 0 0.5rem;
-    text-decoration: none;
+
+  footer p {
+    font-size: 0.9rem;
   }
-  
-  footer a:hover {
-    color: #fff;
+
+  footer div a {
+    font-size: 1.2rem; /* Adjust icon size */
   }
-  
-  @media (max-width: 768px) {
-    footer p {
-      font-size: 0.9rem;
-    }
+}
+
+@media (max-width: 576px) {
+  footer {
+    padding: 0.5rem 0; /* Further reduced padding for very small screens */
   }
+
+  footer div a {
+    margin: 0 0.5rem; /* Reduce spacing between icons */
+  }
+}
+
 /* ITES Section Container */
 .ites-section .ites-container {
   padding: 2rem;
