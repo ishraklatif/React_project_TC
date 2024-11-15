@@ -16,32 +16,62 @@ function TECH() {
     {
       title: 'Custom Software Development',
       icon: <SiPaloaltosoftware size={50} />,
-      description: 'Tailor-made software solutions to meet your unique business needs.',
+      hoverIcon: <SiPaloaltosoftware size={70} color="#007bff" />, // Larger and colored on hover
+      description: [
+        'Customized Solutions',
+        'End-to-End Development',
+        'Software Architecture',
+      ],
     },
     {
       title: 'Web Development',
       icon: <CgWebsite size={50} />,
-      description: 'Modern and responsive websites to showcase your business online.',
+      hoverIcon: <CgWebsite size={70} color="#007bff" />,
+      description: [
+        'Responsive Website Design',
+        'E-commerce Solutions',
+        'Web Application Development',
+      ],
     },
     {
       title: 'Mobile App Development',
       icon: <FaAppStoreIos size={50} />,
-      description: 'Innovative and user-friendly mobile applications for all platforms.',
+      hoverIcon: <FaAppStoreIos size={70} color="#007bff" />,
+      description: [
+        'iOS & Android Development',
+        'Cross-Platform Solutions',
+        'App Maintenance & Support',
+      ],
     },
     {
       title: 'Cloud Computing & Infrastructure',
       icon: <TbCloudComputing size={50} />,
-      description: 'Secure and scalable cloud solutions to enhance your IT infrastructure.',
+      hoverIcon: <TbCloudComputing size={70} color="#007bff" />,
+      description: [
+        'Cloud Migration',
+        'Cloud Management',
+        'Infrastructure as a Service (IaaS)',
+      ],
     },
     {
       title: 'Cybersecurity Solutions',
       icon: <GiCyberEye size={50} />,
-      description: 'Protect your digital assets with advanced cybersecurity services.',
+      hoverIcon: <GiCyberEye size={70} color="#007bff" />,
+      description: [
+        'Threat Detection',
+        'Vulnerability Management',
+        'Incident Response',
+      ],
     },
     {
       title: 'IT Support & Maintenance',
       icon: <GrHostMaintenance size={50} />,
-      description: 'Reliable IT support to ensure smooth business operations.',
+      hoverIcon: <GrHostMaintenance size={70} color="#007bff" />,
+      description: [
+        '24/7 Technical Support',
+        'Network Security & Monitoring',
+        'System Troubleshooting',
+      ],
     },
   ];
 
@@ -59,14 +89,16 @@ function TECH() {
                 onMouseLeave={() => setHoveredCard(null)}
               >
                 <Card.Body>
-                  {service.icon}
+                  {hoveredCard === index ? service.hoverIcon : service.icon}
                   <Card.Title className="tech-card-title">
                     {service.title}
                   </Card.Title>
                   {hoveredCard === index && (
-                    <Card.Text className="tech-card-description">
-                      {service.description}
-                    </Card.Text>
+                    <ul className="tech-card-description">
+                      {service.description.map((item, i) => (
+                        <li key={i}>{item}</li>
+                      ))}
+                    </ul>
                   )}
                 </Card.Body>
               </Card>

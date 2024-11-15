@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, Container, Row, Col } from 'react-bootstrap';
 import { AiOutlineCustomerService, AiOutlineDatabase } from "react-icons/ai";
 import { FaRegIdCard } from "react-icons/fa6";
@@ -8,15 +8,58 @@ import { GiHumanPyramid } from "react-icons/gi";
 import Banner from '../components/Banner';
 import Contact from '../components/Contact';
 
-
 function ITES() {
+  const [hoveredCard, setHoveredCard] = useState(null);
+
   const services = [
-    { title: 'Customer Support(Call Centers)', icon: <AiOutlineCustomerService size={50} /> },
-    { title: 'Data Entry & Processing', icon: <AiOutlineDatabase size={50} /> },
-    { title: 'Payroll Management', icon: <FaRegIdCard size={50} /> },
-    { title: 'Telemarketing', icon: <MdWifiCalling3 size={50} /> },
-    { title: 'Finance & Accounting Services', icon: <SiCashapp size={50} /> },
-    { title: 'HR Services', icon: <GiHumanPyramid size={50} /> }
+    {
+      title: 'Customer Support (Call Centers)',
+      icon: <AiOutlineCustomerService size={50} />,
+      hoverIcon: <AiOutlineCustomerService size={70} color="#007bff" />,
+      description: [
+        'Efficient, 24/7 customer service. We handle inquiries via phone, email, and chat, ensuring prompt and professional responses.'
+      ],
+    },
+    {
+      title: 'Data Entry & Processing',
+      icon: <AiOutlineDatabase size={50} />,
+      hoverIcon: <AiOutlineDatabase size={70} color="#007bff" />,
+      description: [
+        'Streamline your data management. Our team organizes, processes, and secures large datasets, helping you make informed decisions.'
+      ],
+    },
+    {
+      title: 'Payroll Management',
+      icon: <FaRegIdCard size={50} />,
+      hoverIcon: <FaRegIdCard size={70} color="#007bff" />,
+      description: [
+        'Simplify payroll. From processing salaries to managing benefits, we take care of it all, so you can focus on growing your business.'
+      ],
+    },
+    {
+      title: 'Telemarketing',
+      icon: <MdWifiCalling3 size={50} />,
+      hoverIcon: <MdWifiCalling3 size={70} color="#007bff" />,
+      description: [
+        'Boost your sales. Our dedicated telemarketing team effectively promotes your products and services to increase conversions.'
+      ],
+    },
+    {
+      title: 'Finance & Accounting Services',
+      icon: <SiCashapp size={50} />,
+      hoverIcon: <SiCashapp size={70} color="#007bff" />,
+      description: [
+        'Keep your finances in check. We manage bookkeeping, audits, and compliance, so you don’t have to.'
+      ],
+    },
+    {
+      title: 'HR Services',
+      icon: <GiHumanPyramid size={50} />,
+      hoverIcon: <GiHumanPyramid size={70} color="#007bff" />,
+      description: [
+        'Build a strong team. We handle recruitment, training, and performance management, ensuring you get the best talent.'
+      ],
+    },
   ];
 
   return (
@@ -27,10 +70,23 @@ function ITES() {
         <Row className="ites-row">
           {services.map((service, index) => (
             <Col md={4} key={index} className="mb-4">
-              <Card className="ites-card text-center">
+              <Card
+                className="ites-card text-center"
+                onMouseEnter={() => setHoveredCard(index)}
+                onMouseLeave={() => setHoveredCard(null)}
+              >
                 <Card.Body>
-                  {service.icon}
-                  <Card.Title className="ites-card-title">{service.title}</Card.Title>
+                  {hoveredCard === index ? service.hoverIcon : service.icon}
+                  <Card.Title className="ites-card-title">
+                    {service.title}
+                  </Card.Title>
+                  {hoveredCard === index && (
+                    <ul className="ites-card-description">
+                      {service.description.map((item, i) => (
+                        <li key={i}>{item}</li>
+                      ))}
+                    </ul>
+                  )}
                 </Card.Body>
               </Card>
             </Col>

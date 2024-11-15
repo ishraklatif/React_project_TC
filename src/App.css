@@ -561,7 +561,7 @@ nav.navbar .nav-link:hover {
       font-size: 0.9rem;
     }
   }
-  /* ITES Section */
+/* ITES Section Container */
 .ites-section .ites-container {
   padding: 2rem;
   text-align: center;
@@ -574,7 +574,7 @@ nav.navbar .nav-link:hover {
   color: #333;
 }
 
-/* Row and Column adjustments for layout */
+/* Row and Column Adjustments for Layout */
 .ites-section .ites-row {
   display: flex;
   flex-wrap: wrap;
@@ -597,6 +597,7 @@ nav.navbar .nav-link:hover {
   text-decoration: none;
   color: inherit;
   padding-top: 1.5rem;
+  position: relative;
 }
 
 .ites-section .ites-card:hover {
@@ -622,6 +623,27 @@ nav.navbar .nav-link:hover {
 
 .ites-section .ites-card:hover .ites-card-title {
   color: #ffffff;
+}
+
+/* Description Styling with Bullet Points */
+.ites-section .ites-card-description {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #ffffff;
+  opacity: 0;
+  list-style-type: disc; /* Add bullets */
+  text-align: left; /* Align text to the left */
+  padding-left: 1rem; /* Indent for bullets */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.ites-section .ites-card:hover .ites-card-description {
+  opacity: 1; /* Make description visible on hover */
+}
+
+.ites-section .ites-card-description li {
+  margin-bottom: 0.5rem; /* Space between list items */
+  color: #ffffff; /* White text for list items */
 }
 
 /* Responsive Styling */
@@ -674,122 +696,145 @@ nav.navbar .nav-link:hover {
 }
 
 
+
  
 
-   /*  BPO Section */
-   .bpo-section .bpo-container {
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  .bpo-section .bpo-container h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-    color: #333;
-  }
-  
-  /* Row and Column adjustments for layout */
-  .bpo-section .bpo-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
+   /* BPO Section Container */
+.bpo-section .bpo-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.bpo-section .bpo-container h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* Row and Column Adjustments for Layout */
+.bpo-section .bpo-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.bpo-section .bpo-col {
+  flex: 0 0 33.333%;
+  max-width: 33.333%;
+}
+
+/* Card Styling with Hover Effect */
+.bpo-section .bpo-card {
+  border: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  text-align: center;
+  background-color: white;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  padding-top: 1.5rem;
+  position: relative;
+}
+
+.bpo-section .bpo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  background-color: #000000;
+}
+
+/* Icon Styling */
+.bpo-section .bpo-card .icon {
+  margin-bottom: 1rem;
+}
+
+/* Title Styling */
+.bpo-section .bpo-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #000000;
+  margin-top: 1rem;
+  transition: color 0.3s ease;
+  font-family: "Rationale", sans-serif;
+}
+
+.bpo-section .bpo-card:hover .bpo-card-title {
+  color: #ffffff;
+}
+
+/* Description Styling with Bullet Points */
+.bpo-section .bpo-card-description {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #ffffff;
+  opacity: 0;
+  list-style-type: disc; /* Add bullets */
+  text-align: left; /* Align text to the left */
+  padding-left: 1rem; /* Indent for bullets */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.bpo-section .bpo-card:hover .bpo-card-description {
+  opacity: 1; /* Make description visible on hover */
+}
+
+.bpo-section .bpo-card-description li {
+  margin-bottom: 0.5rem; /* Space between list items */
+  color: #ffffff; /* White text for list items */
+}
+
+/* Responsive Styling */
+@media (max-width: 992px) {
   .bpo-section .bpo-col {
-    flex: 0 0 33.333%;
-    max-width: 33.333%;
-  }
-  
-  /* Card Styling with Hover Effect */
-  .bpo-section .bpo-card {
-    border: none;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    text-align: center;
-    background-color: white;
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    padding-top: 1.5rem;
-  }
-  
-  .bpo-section .bpo-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
-    background-color: #000000;
-  }
-  
-  /* Icon Styling */
-  .bpo-section .bpo-card .icon {
-    margin-bottom: 1rem;
-  }
-  
-  /* Title Styling */
-  .bpo-section .bpo-card-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #000000;
-    margin-top: 1rem;
-    transition: color 0.3s ease;
-    font-family: "Rationale", sans-serif;
-  }
-  
-  .bpo-section .bpo-card:hover .bpo-card-title {
-    color: #ffffff;
-  }
-  
-  /* Responsive Styling */
-  @media (max-width: 992px) {
-    .bpo-section .ites-col {
-      flex: 0 0 50%;
-      max-width: 50%;
-    }
-  
-    .bpo-section .bpo-container h2 {
-      font-size: 2rem;
-    }
-  
-    .bpo-section .bpo-card-title {
-      font-size: 1.15rem;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .bpo-section .bpo-col {
-      flex: 0 0 100%;
-      max-width: 100%;
-    }
-  
-    .bpo-section .bpo-container h2 {
-      font-size: 1.75rem;
-    }
-  
-    .bpo-section .bpo-card-title {
-      font-size: 1.1rem;
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .bpo-section .bpo-container {
-      padding: 1rem;
-    }
-  
-    .bpo-section .bpo-container h2 {
-      font-size: 1.5rem;
-    }
-  
-    .bpo-section .bpo-card-body {
-      padding: 1rem;
-    }
-  
-    .bpo-section .bpo-card-title {
-      font-size: 1rem;
-    }
+    flex: 0 0 50%;
+    max-width: 50%;
   }
 
-  
-  /* OUTS Section */
+  .bpo-section .bpo-container h2 {
+    font-size: 2rem;
+  }
+
+  .bpo-section .bpo-card-title {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .bpo-section .bpo-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .bpo-section .bpo-container h2 {
+    font-size: 1.75rem;
+  }
+
+  .bpo-section .bpo-card-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .bpo-section .bpo-container {
+    padding: 1rem;
+  }
+
+  .bpo-section .bpo-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .bpo-section .bpo-card-body {
+    padding: 1rem;
+  }
+
+  .bpo-section .bpo-card-title {
+    font-size: 1rem;
+  }
+}
+
+
+/* Outs Section Container */
 .outs-section .outs-container {
   padding: 2rem;
   text-align: center;
@@ -802,7 +847,7 @@ nav.navbar .nav-link:hover {
   color: #333;
 }
 
-/* Row and Column adjustments for layout */
+/* Row and Column Adjustments for Layout */
 .outs-section .outs-row {
   display: flex;
   flex-wrap: wrap;
@@ -825,6 +870,7 @@ nav.navbar .nav-link:hover {
   text-decoration: none;
   color: inherit;
   padding-top: 1.5rem;
+  position: relative;
 }
 
 .outs-section .outs-card:hover {
@@ -850,6 +896,27 @@ nav.navbar .nav-link:hover {
 
 .outs-section .outs-card:hover .outs-card-title {
   color: #ffffff;
+}
+
+/* Description Styling with Bullet Points */
+.outs-section .outs-card-description {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #ffffff;
+  opacity: 0;
+  list-style-type: disc; /* Add bullets */
+  text-align: left; /* Align text to the left */
+  padding-left: 1rem; /* Indent for bullets */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.outs-section .outs-card:hover .outs-card-description {
+  opacity: 1; /* Make description visible on hover */
+}
+
+.outs-section .outs-card-description li {
+  margin-bottom: 0.5rem; /* Space between list items */
+  color: #ffffff; /* White text for list items */
 }
 
 /* Responsive Styling */
@@ -900,6 +967,7 @@ nav.navbar .nav-link:hover {
     font-size: 1rem;
   }
 }
+
 /* Tech Section Container */
 .tech-section .tech-container {
   padding: 2rem;
@@ -965,11 +1033,15 @@ nav.navbar .nav-link:hover {
 }
 
 /* Description Styling */
+/* Description Styling with Bullet Points */
 .tech-section .tech-card-description {
   margin-top: 1rem;
   font-size: 0.9rem;
   color: #ffffff;
   opacity: 0;
+  list-style-type: disc; /* Add bullets */
+  text-align: left; /* Align text to the left */
+  padding-left: 1rem; /* Indent for bullets */
   transition: opacity 0.3s ease-in-out;
 }
 
@@ -977,6 +1049,10 @@ nav.navbar .nav-link:hover {
   opacity: 1; /* Make description visible on hover */
 }
 
+.tech-section .tech-card-description li {
+  margin-bottom: 0.5rem; /* Space between list items */
+  color: #ffffff; /* White text for list items */
+}
 /* Responsive Styling */
 @media (max-width: 992px) {
   .tech-section .tech-col {
