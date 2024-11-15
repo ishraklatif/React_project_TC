@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'; 
 import { Card, Container, Row, Col } from 'react-bootstrap';
 import { IoShareSocialOutline } from "react-icons/io5";
 import { MdOutlineEmojiEvents } from "react-icons/md";
@@ -11,7 +11,20 @@ import Banner from '../components/Banner';
 import Contact from '../components/Contact';
 
 function PRM() {
-  const [hoveredCard, setHoveredCard] = useState(null);
+  // Define the text array for Banner component
+  const rotateTextArray = [
+    "Brand Positioning & Messaging",
+    "Reputation Management",
+    "Crisis Communication",
+    "Branding Strategy",
+    "Social Media PR",
+    "Content Creation & Storytelling",
+    "Event PR & Promotions",
+    "Crisis Management & Communication",
+    "Internal Comm & Employee Engagement",
+  ];
+
+  const [hoveredTitle, setHoveredTitle] = useState(rotateTextArray[0]);
 
   const services = [
     { title: 'Brand Positioning & Messaging', icon: <TbBrandDiscord size={50} /> },
@@ -22,12 +35,13 @@ function PRM() {
     { title: 'Content Creation & Storytelling', icon: <FaBookReader size={50} /> },
     { title: 'Event PR & Promotions', icon: <MdOutlineEmojiEvents size={50} /> },
     { title: 'Crisis Management & Communication', icon: <MdOutlineContactEmergency size={50} /> },
-    { title: 'Internal Comm & Employee Engagement', icon: <SlEnvolopeLetter size={50} /> }
+    { title: 'Internal Comm & Employee Engagement', icon: <SlEnvolopeLetter size={50} /> },
   ];
 
   return (
     <div className="prm-section">
-      <Banner />
+      {/* Pass both the hovered title and rotateTextArray to the Banner */}
+      <Banner rotateText={hoveredTitle} rotateTextArray={rotateTextArray} />
       <Container className="prm-container my-5">
         <h2>PR Management</h2>
         <Row className="prm-row">
@@ -35,15 +49,15 @@ function PRM() {
             <Col md={4} key={index} className="mb-4">
               <Card
                 className="prm-card text-center"
-                onMouseEnter={() => setHoveredCard(index)}
-                onMouseLeave={() => setHoveredCard(null)}
+                onMouseEnter={() => setHoveredTitle(service.title)}
+                onMouseLeave={() => setHoveredTitle(rotateTextArray[0])}
               >
                 <Card.Body>
                   <div
                     style={{
-                      color: hoveredCard === index ? "#ffffff" : "#000000", // Change color to white on hover
+                      color: hoveredTitle === service.title ? "#ffffff" : "#000000",
+                      fontSize: "50px",
                       transition: "color 0.3s ease",
-                      fontSize: "50px"
                     }}
                   >
                     {service.icon}

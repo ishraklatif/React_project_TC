@@ -13,7 +13,23 @@ import Banner from '../components/Banner';
 import Contact from '../components/Contact';
 
 function BPO() {
-  const [hoveredCard, setHoveredCard] = useState(null);
+  // Define an array for rotating text
+  const rotateTextArray = [
+    "Data Entry & Management",
+    "Data Cleansing & Validation",
+    "Data Mining & Analysis",
+    "Document Digitization",
+    "Finance & Accounting",
+    "Back Office Support",
+    "Telemarketing & Lead Generation",
+    "IT & Technical Support",
+    "HR & Recruitment Process Outsourcing (RPO)",
+    "Content Moderating & Management",
+    "Supply Chain Management",
+    "Research & Analytics",
+  ];
+
+  const [hoveredTitle, setHoveredTitle] = useState(rotateTextArray[0]);
 
   const services = [
     {
@@ -140,23 +156,30 @@ function BPO() {
 
   return (
     <div className="bpo-section">
-      <Banner />
+      {/* Pass the rotateTextArray and hoveredTitle to the Banner */}
+      <Banner rotateTextArray={rotateTextArray} rotateText={hoveredTitle} />
       <Container className="bpo-container my-5">
-        <h2>BPO</h2>
+        <h2>BPO Services</h2>
         <Row className="bpo-row">
           {services.map((service, index) => (
             <Col md={4} key={index} className="mb-4">
               <Card
                 className="bpo-card text-center"
-                onMouseEnter={() => setHoveredCard(index)}
-                onMouseLeave={() => setHoveredCard(null)}
+                onMouseEnter={() => setHoveredTitle(service.title)}
+                onMouseLeave={() => setHoveredTitle(rotateTextArray[0])}
               >
                 <Card.Body>
-                  {hoveredCard === index ? service.hoverIcon : service.icon}
-                  <Card.Title className="bpo-card-title">
-                    {service.title}
-                  </Card.Title>
-                  {hoveredCard === index && (
+                  <div
+                    style={{
+                      color: hoveredTitle === service.title ? "#ffffff" : "#000000",
+                      fontSize: "50px",
+                      transition: "color 0.3s ease",
+                    }}
+                  >
+                    {hoveredTitle === service.title ? service.hoverIcon : service.icon}
+                  </div>
+                  <Card.Title className="bpo-card-title">{service.title}</Card.Title>
+                  {hoveredTitle === service.title && (
                     <ul className="bpo-card-description">
                       {service.description.map((item, i) => (
                         <li key={i}>{item}</li>

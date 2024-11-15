@@ -1,19 +1,28 @@
 // Home.js
-import React from 'react';
+import React, { useMemo } from 'react';
 import Banner from '../components/Banner';
 import About from './About';
 import Services from '../components/Services';
 import Contact from '../components/Contact';
 
 function Home() {
-    return (
-        <div>
-            <Banner />
-            <About />
-            <Services />
-            <Contact />
-        </div>
-    );
+  const toRotate = useMemo(() => [
+    "IT Enabled Services (ITES)", 
+    "Outsourcing Services", 
+    "BPO Services", 
+    "Tech Services", 
+    "PR Management"
+  ], []);
+
+  return (
+    <div>
+      {/* Pass the toRotate array as a prop */}
+      <Banner rotateTextArray={toRotate} />
+      <About />
+      <Services />
+      <Contact />
+    </div>
+  );
 }
 
 export default Home;

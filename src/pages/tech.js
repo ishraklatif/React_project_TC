@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'; 
 import { Card, Container, Row, Col } from 'react-bootstrap';
 import Banner from '../components/Banner';
 import Contact from '../components/Contact';
@@ -10,13 +10,23 @@ import { GiCyberEye } from "react-icons/gi";
 import { GrHostMaintenance } from "react-icons/gr";
 
 function TECH() {
-  const [hoveredCard, setHoveredCard] = useState(null);
+  // Define an array for rotating text
+  const rotateTextArray = [
+    "Custom Software Development",
+    "Web Development",
+    "Mobile App Development",
+    "Cloud Computing & Infrastructure",
+    "Cybersecurity Solutions",
+    "IT Support & Maintenance",
+  ];
+
+  const [hoveredTitle, setHoveredTitle] = useState(rotateTextArray[0]);
 
   const services = [
     {
       title: 'Custom Software Development',
       icon: <SiPaloaltosoftware size={50} />,
-      hoverIcon: <SiPaloaltosoftware size={70} color="#ffffff" />, // Larger and colored on hover
+      hoverIcon: <SiPaloaltosoftware size={70} color="#ffffff" />, // Larger and white on hover
       description: [
         'Customized Solutions',
         'End-to-End Development',
@@ -77,7 +87,8 @@ function TECH() {
 
   return (
     <div className="tech-section">
-      <Banner />
+      {/* Pass both the rotateTextArray and hoveredTitle to the Banner */}
+      <Banner rotateTextArray={rotateTextArray} rotateText={hoveredTitle} />
       <Container className="tech-container my-5">
         <h2>Tech Services</h2>
         <Row className="tech-row">
@@ -85,15 +96,21 @@ function TECH() {
             <Col md={4} key={index} className="mb-4">
               <Card
                 className="tech-card text-center"
-                onMouseEnter={() => setHoveredCard(index)}
-                onMouseLeave={() => setHoveredCard(null)}
+                onMouseEnter={() => setHoveredTitle(service.title)}
+                onMouseLeave={() => setHoveredTitle(rotateTextArray[0])}
               >
                 <Card.Body>
-                  {hoveredCard === index ? service.hoverIcon : service.icon}
-                  <Card.Title className="tech-card-title">
-                    {service.title}
-                  </Card.Title>
-                  {hoveredCard === index && (
+                  <div
+                    style={{
+                      color: hoveredTitle === service.title ? "#ffffff" : "#000000",
+                      fontSize: "50px",
+                      transition: "color 0.3s ease",
+                    }}
+                  >
+                    {hoveredTitle === service.title ? service.hoverIcon : service.icon}
+                  </div>
+                  <Card.Title className="tech-card-title">{service.title}</Card.Title>
+                  {hoveredTitle === service.title && (
                     <ul className="tech-card-description">
                       {service.description.map((item, i) => (
                         <li key={i}>{item}</li>

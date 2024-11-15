@@ -9,7 +9,16 @@ import Banner from '../components/Banner';
 import Contact from '../components/Contact';
 
 function ITES() {
-  const [hoveredCard, setHoveredCard] = useState(null);
+  const [hoveredTitle, setHoveredTitle] = useState("IT Enabled Services (ITES)");
+
+  const rotateTextArray = [
+    "Customer Support (Call Centers)",
+    "Data Entry & Processing",
+    "Payroll Management",
+    "Telemarketing",
+    "Finance & Accounting Services",
+    "HR Services",
+  ];
 
   const services = [
     {
@@ -64,7 +73,8 @@ function ITES() {
 
   return (
     <div className="ites-section">
-      <Banner />
+      {/* Pass the rotateTextArray to the Banner component */}
+      <Banner rotateTextArray={rotateTextArray} />
       <Container className="ites-container my-5">
         <h2>ITES Services</h2>
         <Row className="ites-row">
@@ -72,15 +82,21 @@ function ITES() {
             <Col md={4} key={index} className="mb-4">
               <Card
                 className="ites-card text-center"
-                onMouseEnter={() => setHoveredCard(index)}
-                onMouseLeave={() => setHoveredCard(null)}
+                onMouseEnter={() => setHoveredTitle(service.title)}
+                onMouseLeave={() => setHoveredTitle("IT Enabled Services (ITES)")}
               >
                 <Card.Body>
-                  {hoveredCard === index ? service.hoverIcon : service.icon}
-                  <Card.Title className="ites-card-title">
-                    {service.title}
-                  </Card.Title>
-                  {hoveredCard === index && (
+                  <div
+                    style={{
+                      color: hoveredTitle === service.title ? "#ffffff" : "#000000",
+                      fontSize: "50px",
+                      transition: "color 0.3s ease",
+                    }}
+                  >
+                    {hoveredTitle === service.title ? service.hoverIcon : service.icon}
+                  </div>
+                  <Card.Title className="ites-card-title">{service.title}</Card.Title>
+                  {hoveredTitle === service.title && (
                     <ul className="ites-card-description">
                       {service.description.map((item, i) => (
                         <li key={i}>{item}</li>

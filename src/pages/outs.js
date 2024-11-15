@@ -10,7 +10,17 @@ import Banner from '../components/Banner';
 import Contact from '../components/Contact';
 
 function OUTS() {
-  const [hoveredCard, setHoveredCard] = useState(null);
+  // Define the rotateTextArray to pass to Banner
+  const rotateTextArray = [
+    "IT & Software Development",
+    "Customer Support",
+    "Administrative Services",
+    "IT Infrastructure Management",
+    "Cloud Computing Solutions",
+    "Cybersecurity Services",
+  ];
+
+  const [hoveredTitle, setHoveredTitle] = useState(rotateTextArray[0]);
 
   const services = [
     {
@@ -36,7 +46,7 @@ function OUTS() {
     {
       title: 'Administrative Services',
       icon: <TbHierarchy3 size={50} />,
-      hoverIcon: <TbHierarchy3 size={70} color="#ffffff"/>,
+      hoverIcon: <TbHierarchy3 size={70} color="#ffffff" />,
       description: [
         'Data Management',
         'Operational Support',
@@ -56,7 +66,7 @@ function OUTS() {
     {
       title: 'Cloud Computing Solutions',
       icon: <GrCloudSoftware size={50} />,
-      hoverIcon: <GrCloudSoftware size={70}color="#ffffff" />,
+      hoverIcon: <GrCloudSoftware size={70} color="#ffffff" />,
       description: [
         'Cloud Migration Services',
         'Infrastructure as a Service (IaaS)',
@@ -66,7 +76,7 @@ function OUTS() {
     {
       title: 'Cybersecurity Services',
       icon: <GiCyberEye size={50} />,
-      hoverIcon: <GiCyberEye size={70} color="#ffffff"/>,
+      hoverIcon: <GiCyberEye size={70} color="#ffffff" />,
       description: [
         'Risk Assessment',
         'Threat Mitigation',
@@ -77,7 +87,8 @@ function OUTS() {
 
   return (
     <div className="outs-section">
-      <Banner />
+      {/* Pass the rotateTextArray to the Banner component */}
+      <Banner rotateTextArray={rotateTextArray} />
       <Container className="outs-container my-5">
         <h2>Out Sourcing</h2>
         <Row className="outs-row">
@@ -85,15 +96,21 @@ function OUTS() {
             <Col md={4} key={index} className="mb-4">
               <Card
                 className="outs-card text-center"
-                onMouseEnter={() => setHoveredCard(index)}
-                onMouseLeave={() => setHoveredCard(null)}
+                onMouseEnter={() => setHoveredTitle(service.title)}
+                onMouseLeave={() => setHoveredTitle(rotateTextArray[0])}
               >
                 <Card.Body>
-                  {hoveredCard === index ? service.hoverIcon : service.icon}
-                  <Card.Title className="outs-card-title">
-                    {service.title}
-                  </Card.Title>
-                  {hoveredCard === index && (
+                  <div
+                    style={{
+                      color: hoveredTitle === service.title ? "#ffffff" : "#000000",
+                      fontSize: "50px",
+                      transition: "color 0.3s ease",
+                    }}
+                  >
+                    {hoveredTitle === service.title ? service.hoverIcon : service.icon}
+                  </div>
+                  <Card.Title className="outs-card-title">{service.title}</Card.Title>
+                  {hoveredTitle === service.title && (
                     <ul className="outs-card-description">
                       {service.description.map((item, i) => (
                         <li key={i}>{item}</li>
