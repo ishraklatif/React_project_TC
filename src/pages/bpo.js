@@ -19,7 +19,7 @@ function BPO() {
     {
       title: 'Data Entry & Management',
       icon: <TbDatabaseCog size={50} />,
-      hoverIcon: <TbDatabaseCog size={70} color="#007bff" />,
+      hoverIcon: <TbDatabaseCog size={70} color="#ffffff" />,
       description: [
         'Efficient data organization and management.',
         'Database updates and integrity checks.',
@@ -29,7 +29,7 @@ function BPO() {
     {
       title: 'Data Cleansing & Validation',
       icon: <AiOutlineDatabase size={50} />,
-      hoverIcon: <AiOutlineDatabase size={70} color="#007bff" />,
+      hoverIcon: <AiOutlineDatabase size={70} color="#ffffff" />,
       description: [
         'Ensure data accuracy and consistency.',
         'Remove redundant or outdated entries.',
@@ -39,7 +39,7 @@ function BPO() {
     {
       title: 'Data Mining & Analysis',
       icon: <LuDatabaseBackup size={50} />,
-      hoverIcon: <LuDatabaseBackup size={70} color="#007bff" />,
+      hoverIcon: <LuDatabaseBackup size={70} color="#ffffff" />,
       description: [
         'Extract valuable insights from raw data.',
         'Market trends and customer behavior analysis.',
@@ -49,7 +49,7 @@ function BPO() {
     {
       title: 'Document Digitization',
       icon: <GrDocumentStore size={50} />,
-      hoverIcon: <GrDocumentStore size={70} color="#007bff" />,
+      hoverIcon: <GrDocumentStore size={70} color="#ffffff" />,
       description: [
         'Convert physical documents into digital formats.',
         'OCR-enabled scanning for searchable documents.',
@@ -59,7 +59,7 @@ function BPO() {
     {
       title: 'Finance & Accounting',
       icon: <SiCashapp size={50} />,
-      hoverIcon: <SiCashapp size={70} color="#007bff" />,
+      hoverIcon: <SiCashapp size={70} color="#ffffff" />,
       description: [
         'Bookkeeping and financial statement preparation.',
         'Tax filing and compliance support.',
@@ -69,7 +69,7 @@ function BPO() {
     {
       title: 'Back Office Support',
       icon: <GiHumanPyramid size={50} />,
-      hoverIcon: <GiHumanPyramid size={70} color="#007bff" />,
+      hoverIcon: <GiHumanPyramid size={70} color="#ffffff" />,
       description: [
         'Administrative and operational tasks.',
         'Database management and report generation.',
@@ -79,7 +79,7 @@ function BPO() {
     {
       title: 'Telemarketing & Lead Generation',
       icon: <BsTelephoneForward size={50} />,
-      hoverIcon: <BsTelephoneForward size={70} color="#007bff" />,
+      hoverIcon: <BsTelephoneForward size={70} color="#ffffff" />,
       description: [
         'Effective outreach campaigns.',
         'Targeted lead generation strategies.',
@@ -89,7 +89,7 @@ function BPO() {
     {
       title: 'IT & Technical Support',
       icon: <FaUnity size={50} />,
-      hoverIcon: <FaUnity size={70} color="#007bff" />,
+      hoverIcon: <FaUnity size={70} color="#ffffff" />,
       description: [
         'Hardware and software troubleshooting.',
         '24/7 IT helpdesk services.',
@@ -99,7 +99,7 @@ function BPO() {
     {
       title: 'HR & Recruitment Process Outsourcing (RPO)',
       icon: <GiHumanTarget size={50} />,
-      hoverIcon: <GiHumanTarget size={70} color="#007bff" />,
+      hoverIcon: <GiHumanTarget size={70} color="#ffffff" />,
       description: [
         'End-to-end recruitment support.',
         'Employee onboarding and training.',
@@ -109,7 +109,7 @@ function BPO() {
     {
       title: 'Content Moderating & Management',
       icon: <MdContentPasteSearch size={50} />,
-      hoverIcon: <MdContentPasteSearch size={70} color="#007bff" />,
+      hoverIcon: <MdContentPasteSearch size={70} color="#ffffff" />,
       description: [
         'Ensure content compliance with guidelines.',
         'Manage user-generated content effectively.',
@@ -119,7 +119,7 @@ function BPO() {
     {
       title: 'Supply Chain Management',
       icon: <MdOutlineConnectingAirports size={50} />,
-      hoverIcon: <MdOutlineConnectingAirports size={70} color="#007bff" />,
+      hoverIcon: <MdOutlineConnectingAirports size={70} color="#ffffff" />,
       description: [
         'Optimize logistics and delivery timelines.',
         'Vendor and inventory management.',
@@ -129,7 +129,7 @@ function BPO() {
     {
       title: 'Research & Analytics',
       icon: <GiArchiveResearch size={50} />,
-      hoverIcon: <GiArchiveResearch size={70} color="#007bff" />,
+      hoverIcon: <GiArchiveResearch size={70} color="#ffffff" />,
       description: [
         'In-depth market research.',
         'Custom analytics dashboards.',

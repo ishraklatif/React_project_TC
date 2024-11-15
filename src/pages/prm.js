@@ -1,19 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, Container, Row, Col } from 'react-bootstrap';
 import { IoShareSocialOutline } from "react-icons/io5";
 import { MdOutlineEmojiEvents } from "react-icons/md";
-import Banner from '../components/Banner';
-import Contact from '../components/Contact';
-import { TbBrandDiscord } from "react-icons/tb";
+import { TbBrandDiscord, TbEmergencyBed, TbBrandAdobe } from "react-icons/tb";
 import { HiSpeakerphone } from "react-icons/hi";
-import { TbEmergencyBed } from "react-icons/tb";
-import { TbBrandAdobe } from "react-icons/tb";
 import { FaBookReader } from "react-icons/fa";
 import { MdOutlineContactEmergency } from "react-icons/md";
 import { SlEnvolopeLetter } from "react-icons/sl";
-
+import Banner from '../components/Banner';
+import Contact from '../components/Contact';
 
 function PRM() {
+  const [hoveredCard, setHoveredCard] = useState(null);
+
   const services = [
     { title: 'Brand Positioning & Messaging', icon: <TbBrandDiscord size={50} /> },
     { title: 'Reputation Management', icon: <HiSpeakerphone size={50} /> },
@@ -23,7 +22,7 @@ function PRM() {
     { title: 'Content Creation & Storytelling', icon: <FaBookReader size={50} /> },
     { title: 'Event PR & Promotions', icon: <MdOutlineEmojiEvents size={50} /> },
     { title: 'Crisis Management & Communication', icon: <MdOutlineContactEmergency size={50} /> },
-    { title: 'Internal Communication & Employee Engagement', icon: <SlEnvolopeLetter size={50} /> }
+    { title: 'Internal Comm & Employee Engagement', icon: <SlEnvolopeLetter size={50} /> }
   ];
 
   return (
@@ -34,9 +33,21 @@ function PRM() {
         <Row className="prm-row">
           {services.map((service, index) => (
             <Col md={4} key={index} className="mb-4">
-              <Card className="prm-card text-center">
+              <Card
+                className="prm-card text-center"
+                onMouseEnter={() => setHoveredCard(index)}
+                onMouseLeave={() => setHoveredCard(null)}
+              >
                 <Card.Body>
-                  {service.icon}
+                  <div
+                    style={{
+                      color: hoveredCard === index ? "#ffffff" : "#000000", // Change color to white on hover
+                      transition: "color 0.3s ease",
+                      fontSize: "50px"
+                    }}
+                  >
+                    {service.icon}
+                  </div>
                   <Card.Title className="prm-card-title">{service.title}</Card.Title>
                 </Card.Body>
               </Card>

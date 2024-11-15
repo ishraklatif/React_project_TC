@@ -16,7 +16,7 @@ function OUTS() {
     {
       title: 'IT & Software Development',
       icon: <MdOutlineEngineering size={50} />,
-      hoverIcon: <MdOutlineEngineering size={70} color="#007bff" />,
+      hoverIcon: <MdOutlineEngineering size={70} color="#ffffff" />,
       description: [
         'Custom Application Development',
         'Software Design & Testing',
@@ -26,7 +26,7 @@ function OUTS() {
     {
       title: 'Customer Support',
       icon: <RiCustomerService2Line size={50} />,
-      hoverIcon: <RiCustomerService2Line size={70} color="#007bff" />,
+      hoverIcon: <RiCustomerService2Line size={70} color="#ffffff" />,
       description: [
         '24/7 Customer Assistance',
         'Technical Support',
@@ -36,7 +36,7 @@ function OUTS() {
     {
       title: 'Administrative Services',
       icon: <TbHierarchy3 size={50} />,
-      hoverIcon: <TbHierarchy3 size={70} color="#007bff" />,
+      hoverIcon: <TbHierarchy3 size={70} color="#ffffff"/>,
       description: [
         'Data Management',
         'Operational Support',
@@ -46,7 +46,7 @@ function OUTS() {
     {
       title: 'IT Infrastructure Management',
       icon: <FaUniversity size={50} />,
-      hoverIcon: <FaUniversity size={70} color="#007bff" />,
+      hoverIcon: <FaUniversity size={70} color="#ffffff" />,
       description: [
         'Network Monitoring',
         'Server Administration',
@@ -56,7 +56,7 @@ function OUTS() {
     {
       title: 'Cloud Computing Solutions',
       icon: <GrCloudSoftware size={50} />,
-      hoverIcon: <GrCloudSoftware size={70} color="#007bff" />,
+      hoverIcon: <GrCloudSoftware size={70}color="#ffffff" />,
       description: [
         'Cloud Migration Services',
         'Infrastructure as a Service (IaaS)',
@@ -66,7 +66,7 @@ function OUTS() {
     {
       title: 'Cybersecurity Services',
       icon: <GiCyberEye size={50} />,
-      hoverIcon: <GiCyberEye size={70} color="#007bff" />,
+      hoverIcon: <GiCyberEye size={70} color="#ffffff"/>,
       description: [
         'Risk Assessment',
         'Threat Mitigation',

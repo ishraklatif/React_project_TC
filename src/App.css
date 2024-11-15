@@ -586,29 +586,41 @@ nav.navbar .nav-link:hover {
   max-width: 33.333%;
 }
 
-/* Card Styling with Hover Effect */
+/* Card Styling */
 .ites-section .ites-card {
   border: none;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
   text-align: center;
   background-color: white;
   overflow: hidden;
   text-decoration: none;
   color: inherit;
-  padding-top: 1.5rem;
+  padding: 1.5rem;
   position: relative;
+  height: 250px; /* Consistent height */
 }
 
+/* Card Hover Styling */
 .ites-section .ites-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
   background-color: #000000;
+}
+
+/* Reduce Contents on Hover */
+.ites-section .ites-card:hover .ites-card-body {
+  transform: scale(0.9); /* Scale down the contents */
+  transition: transform 0.3s ease;
 }
 
 /* Icon Styling */
 .ites-section .ites-card .icon {
   margin-bottom: 1rem;
+  font-size: 3rem; /* Consistent icon size */
+  transition: color 0.3s ease;
+}
+
+.ites-section .ites-card:hover .icon {
+  color: #ffffff; /* Icon color on hover */
 }
 
 /* Title Styling */
@@ -625,10 +637,11 @@ nav.navbar .nav-link:hover {
   color: #ffffff;
 }
 
-/* Description Styling with Bullet Points */
+/* Description Styling */
+/* Smaller Description Fonts */
 .ites-section .ites-card-description {
   margin-top: 1rem;
-  font-size: 0.9rem;
+  font-size: 0.7rem; /* Smaller font size */
   color: #ffffff;
   opacity: 0;
   list-style-type: disc; /* Add bullets */
@@ -660,6 +673,10 @@ nav.navbar .nav-link:hover {
   .ites-section .ites-card-title {
     font-size: 1.15rem;
   }
+
+  .ites-section .ites-card-description {
+    font-size: 0.65rem; /* Even smaller font for medium screens */
+  }
 }
 
 @media (max-width: 768px) {
@@ -675,6 +692,10 @@ nav.navbar .nav-link:hover {
   .ites-section .ites-card-title {
     font-size: 1.1rem;
   }
+
+  .ites-section .ites-card-description {
+    font-size: 0.6rem; /* Smaller font for smaller screens */
+  }
 }
 
 @media (max-width: 576px) {
@@ -686,12 +707,17 @@ nav.navbar .nav-link:hover {
     font-size: 1.5rem;
   }
 
-  .ites-section .ites-card-body {
+  .ites-section .ites-card {
+    height: 180px; /* Adjust for smaller screens */
     padding: 1rem;
   }
 
   .ites-section .ites-card-title {
     font-size: 1rem;
+  }
+
+  .ites-section .ites-card-description {
+    font-size: 0.55rem; /* Smallest font for very small screens */
   }
 }
 
@@ -699,7 +725,7 @@ nav.navbar .nav-link:hover {
 
  
 
-   /* BPO Section Container */
+/* BPO Section Container */
 .bpo-section .bpo-container {
   padding: 2rem;
   text-align: center;
@@ -724,29 +750,41 @@ nav.navbar .nav-link:hover {
   max-width: 33.333%;
 }
 
-/* Card Styling with Hover Effect */
+/* Card Styling */
 .bpo-section .bpo-card {
   border: none;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
   text-align: center;
   background-color: white;
   overflow: hidden;
   text-decoration: none;
   color: inherit;
-  padding-top: 1.5rem;
+  padding: 1.5rem;
   position: relative;
+  height: 250px; /* Consistent height */
 }
 
+/* Card Hover Styling */
 .bpo-section .bpo-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
   background-color: #000000;
+}
+
+/* Reduce Contents on Hover */
+.bpo-section .bpo-card:hover .bpo-card-body {
+  transform: scale(0.9); /* Scale down the contents */
+  transition: transform 0.3s ease;
 }
 
 /* Icon Styling */
 .bpo-section .bpo-card .icon {
   margin-bottom: 1rem;
+  font-size: 3rem; /* Consistent icon size */
+  transition: color 0.3s ease;
+}
+
+.bpo-section .bpo-card:hover .icon {
+  color: #ffffff; /* Icon color on hover */
 }
 
 /* Title Styling */
@@ -763,10 +801,11 @@ nav.navbar .nav-link:hover {
   color: #ffffff;
 }
 
-/* Description Styling with Bullet Points */
+/* Description Styling */
+/* Smaller Description Fonts */
 .bpo-section .bpo-card-description {
   margin-top: 1rem;
-  font-size: 0.9rem;
+  font-size: 0.7rem; /* Smaller font size */
   color: #ffffff;
   opacity: 0;
   list-style-type: disc; /* Add bullets */
@@ -798,6 +837,10 @@ nav.navbar .nav-link:hover {
   .bpo-section .bpo-card-title {
     font-size: 1.15rem;
   }
+
+  .bpo-section .bpo-card-description {
+    font-size: 0.65rem; /* Even smaller font for medium screens */
+  }
 }
 
 @media (max-width: 768px) {
@@ -813,6 +856,10 @@ nav.navbar .nav-link:hover {
   .bpo-section .bpo-card-title {
     font-size: 1.1rem;
   }
+
+  .bpo-section .bpo-card-description {
+    font-size: 0.6rem; /* Smaller font for smaller screens */
+  }
 }
 
 @media (max-width: 576px) {
@@ -824,17 +871,21 @@ nav.navbar .nav-link:hover {
     font-size: 1.5rem;
   }
 
-  .bpo-section .bpo-card-body {
+  .bpo-section .bpo-card {
+    height: 180px; /* Adjust for smaller screens */
     padding: 1rem;
   }
 
   .bpo-section .bpo-card-title {
     font-size: 1rem;
   }
+
+  .bpo-section .bpo-card-description {
+    font-size: 0.55rem; /* Smallest font for very small screens */
+  }
 }
 
-
-/* Outs Section Container */
+/* OUTS Section Container */
 .outs-section .outs-container {
   padding: 2rem;
   text-align: center;
@@ -859,29 +910,42 @@ nav.navbar .nav-link:hover {
   max-width: 33.333%;
 }
 
-/* Card Styling with Hover Effect */
+/* Card Styling */
 .outs-section .outs-card {
   border: none;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
   text-align: center;
   background-color: white;
   overflow: hidden;
   text-decoration: none;
   color: inherit;
-  padding-top: 1.5rem;
+  padding: 1.5rem;
   position: relative;
+  height: 250px; /* Consistent height */
 }
 
+/* Card Hover Styling */
 .outs-section .outs-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
   background-color: #000000;
+}
+
+/* Reduce Contents on Hover */
+.outs-section .outs-card:hover .outs-card-body {
+  transform: scale(0.9); /* Scale down the contents */
+  transition: transform 0.3s ease;
 }
 
 /* Icon Styling */
 .outs-section .outs-card .icon {
   margin-bottom: 1rem;
+  font-size: 3rem; /* Consistent icon size */
+  transition: color 0.3s ease;
+  color: inherit;
+}
+
+.outs-section .outs-card:hover .icon {
+  color: rgb(255, 255, 255);/* Icon color on hover */
 }
 
 /* Title Styling */
@@ -898,10 +962,11 @@ nav.navbar .nav-link:hover {
   color: #ffffff;
 }
 
-/* Description Styling with Bullet Points */
+/* Description Styling */
+/* Smaller Description Fonts */
 .outs-section .outs-card-description {
   margin-top: 1rem;
-  font-size: 0.9rem;
+  font-size: 0.7rem; /* Smaller font size */
   color: #ffffff;
   opacity: 0;
   list-style-type: disc; /* Add bullets */
@@ -933,6 +998,10 @@ nav.navbar .nav-link:hover {
   .outs-section .outs-card-title {
     font-size: 1.15rem;
   }
+
+  .outs-section .outs-card-description {
+    font-size: 0.65rem; /* Even smaller font for medium screens */
+  }
 }
 
 @media (max-width: 768px) {
@@ -948,6 +1017,10 @@ nav.navbar .nav-link:hover {
   .outs-section .outs-card-title {
     font-size: 1.1rem;
   }
+
+  .outs-section .outs-card-description {
+    font-size: 0.6rem; /* Smaller font for smaller screens */
+  }
 }
 
 @media (max-width: 576px) {
@@ -959,12 +1032,17 @@ nav.navbar .nav-link:hover {
     font-size: 1.5rem;
   }
 
-  .outs-section .outs-card-body {
+  .outs-section .outs-card {
+    height: 180px; /* Adjust for smaller screens */
     padding: 1rem;
   }
 
   .outs-section .outs-card-title {
     font-size: 1rem;
+  }
+
+  .outs-section .outs-card-description {
+    font-size: 0.55rem; /* Smallest font for very small screens */
   }
 }
 
@@ -993,29 +1071,41 @@ nav.navbar .nav-link:hover {
   max-width: 33.333%;
 }
 
-/* Card Styling with Hover Effect */
+/* Card Styling */
 .tech-section .tech-card {
   border: none;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
   text-align: center;
   background-color: white;
   overflow: hidden;
   text-decoration: none;
   color: inherit;
-  padding-top: 1.5rem;
+  padding: 1.5rem;
   position: relative;
+  height: 250px; /* Consistent height */
 }
 
+/* Card Hover Styling */
 .tech-section .tech-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
   background-color: #000000;
+}
+
+/* Reduce Contents on Hover */
+.tech-section .tech-card:hover .tech-card-body {
+  transform: scale(0.9); /* Scale down the contents */
+  transition: transform 0.3s ease;
 }
 
 /* Icon Styling */
 .tech-section .tech-card .icon {
   margin-bottom: 1rem;
+  font-size: 3rem; /* Consistent icon size */
+  transition: color 0.3s ease;
+}
+
+.tech-section .tech-card:hover .icon {
+  color: #ffffff; /* Icon color on hover */
 }
 
 /* Title Styling */
@@ -1033,10 +1123,10 @@ nav.navbar .nav-link:hover {
 }
 
 /* Description Styling */
-/* Description Styling with Bullet Points */
+/* Smaller Description Fonts */
 .tech-section .tech-card-description {
   margin-top: 1rem;
-  font-size: 0.9rem;
+  font-size: 0.7rem; /* Smaller font size */
   color: #ffffff;
   opacity: 0;
   list-style-type: disc; /* Add bullets */
@@ -1053,6 +1143,7 @@ nav.navbar .nav-link:hover {
   margin-bottom: 0.5rem; /* Space between list items */
   color: #ffffff; /* White text for list items */
 }
+
 /* Responsive Styling */
 @media (max-width: 992px) {
   .tech-section .tech-col {
@@ -1066,6 +1157,10 @@ nav.navbar .nav-link:hover {
 
   .tech-section .tech-card-title {
     font-size: 1.15rem;
+  }
+
+  .tech-section .tech-card-description {
+    font-size: 0.65rem; /* Even smaller font for medium screens */
   }
 }
 
@@ -1082,6 +1177,10 @@ nav.navbar .nav-link:hover {
   .tech-section .tech-card-title {
     font-size: 1.1rem;
   }
+
+  .tech-section .tech-card-description {
+    font-size: 0.6rem; /* Smaller font for smaller screens */
+  }
 }
 
 @media (max-width: 576px) {
@@ -1093,12 +1192,17 @@ nav.navbar .nav-link:hover {
     font-size: 1.5rem;
   }
 
-  .tech-section .tech-card-body {
+  .tech-section .tech-card {
+    height: 180px; /* Adjust for smaller screens */
     padding: 1rem;
   }
 
   .tech-section .tech-card-title {
     font-size: 1rem;
+  }
+
+  .tech-section .tech-card-description {
+    font-size: 0.55rem; /* Smallest font for very small screens */
   }
 }
 
@@ -1151,6 +1255,8 @@ nav.navbar .nav-link:hover {
 .prm-section .prm-card .icon {
   margin-bottom: 1rem;
 }
+
+
 
 /* Title Styling */
 .prm-section .prm-card-title {

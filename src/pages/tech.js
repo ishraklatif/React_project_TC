@@ -16,7 +16,7 @@ function TECH() {
     {
       title: 'Custom Software Development',
       icon: <SiPaloaltosoftware size={50} />,
-      hoverIcon: <SiPaloaltosoftware size={70} color="#007bff" />, // Larger and colored on hover
+      hoverIcon: <SiPaloaltosoftware size={70} color="#ffffff" />, // Larger and colored on hover
       description: [
         'Customized Solutions',
         'End-to-End Development',
@@ -26,7 +26,7 @@ function TECH() {
     {
       title: 'Web Development',
       icon: <CgWebsite size={50} />,
-      hoverIcon: <CgWebsite size={70} color="#007bff" />,
+      hoverIcon: <CgWebsite size={70} color="#ffffff" />,
       description: [
         'Responsive Website Design',
         'E-commerce Solutions',
@@ -36,7 +36,7 @@ function TECH() {
     {
       title: 'Mobile App Development',
       icon: <FaAppStoreIos size={50} />,
-      hoverIcon: <FaAppStoreIos size={70} color="#007bff" />,
+      hoverIcon: <FaAppStoreIos size={70} color="#ffffff" />,
       description: [
         'iOS & Android Development',
         'Cross-Platform Solutions',
@@ -46,7 +46,7 @@ function TECH() {
     {
       title: 'Cloud Computing & Infrastructure',
       icon: <TbCloudComputing size={50} />,
-      hoverIcon: <TbCloudComputing size={70} color="#007bff" />,
+      hoverIcon: <TbCloudComputing size={70} color="#ffffff" />,
       description: [
         'Cloud Migration',
         'Cloud Management',
@@ -56,7 +56,7 @@ function TECH() {
     {
       title: 'Cybersecurity Solutions',
       icon: <GiCyberEye size={50} />,
-      hoverIcon: <GiCyberEye size={70} color="#007bff" />,
+      hoverIcon: <GiCyberEye size={70} color="#ffffff" />,
       description: [
         'Threat Detection',
         'Vulnerability Management',
@@ -66,7 +66,7 @@ function TECH() {
     {
       title: 'IT Support & Maintenance',
       icon: <GrHostMaintenance size={50} />,
-      hoverIcon: <GrHostMaintenance size={70} color="#007bff" />,
+      hoverIcon: <GrHostMaintenance size={70} color="#ffffff" />,
       description: [
         '24/7 Technical Support',
         'Network Security & Monitoring',
