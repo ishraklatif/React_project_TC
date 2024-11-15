@@ -900,7 +900,7 @@ nav.navbar .nav-link:hover {
     font-size: 1rem;
   }
 }
-/*  Tech Section */
+/* Tech Section Container */
 .tech-section .tech-container {
   padding: 2rem;
   text-align: center;
@@ -913,7 +913,7 @@ nav.navbar .nav-link:hover {
   color: #333;
 }
 
-/* Row and Column adjustments for layout */
+/* Row and Column Adjustments for Layout */
 .tech-section .tech-row {
   display: flex;
   flex-wrap: wrap;
@@ -936,6 +936,7 @@ nav.navbar .nav-link:hover {
   text-decoration: none;
   color: inherit;
   padding-top: 1.5rem;
+  position: relative;
 }
 
 .tech-section .tech-card:hover {
@@ -961,6 +962,19 @@ nav.navbar .nav-link:hover {
 
 .tech-section .tech-card:hover .tech-card-title {
   color: #ffffff;
+}
+
+/* Description Styling */
+.tech-section .tech-card-description {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #ffffff;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tech-section .tech-card:hover .tech-card-description {
+  opacity: 1; /* Make description visible on hover */
 }
 
 /* Responsive Styling */
@@ -1011,6 +1025,7 @@ nav.navbar .nav-link:hover {
     font-size: 1rem;
   }
 }
+
 
 /*  PRM Section */
 .prm-section .prm-container {

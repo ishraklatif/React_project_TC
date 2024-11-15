@@ -1,22 +1,22 @@
 import React from 'react';
 import { Card, Container, Row, Col } from 'react-bootstrap';
-import { AiOutlineCustomerService, AiOutlineDatabase } from "react-icons/ai";
-import { FaRegIdCard } from "react-icons/fa6";
-import { MdWifiCalling3 } from "react-icons/md";
-import { SiCashapp } from "react-icons/si";
-import { GiHumanPyramid } from "react-icons/gi";
+import { TbHierarchy3 } from "react-icons/tb";
+import { FaUniversity } from "react-icons/fa";
+import { GrCloudSoftware } from "react-icons/gr";
+import { GiCyberEye } from "react-icons/gi";
 import Banner from '../components/Banner';
 import Contact from '../components/Contact';
-
+import { MdOutlineEngineering } from "react-icons/md";
+import { RiCustomerService2Line } from "react-icons/ri";
 
 function OUTS() {
   const services = [
-    { title: 'IT & Software Development', icon: <AiOutlineCustomerService size={50} /> },
-    { title: 'Customer Support', icon: <AiOutlineDatabase size={50} /> },
-    { title: 'Administrative Services', icon: <FaRegIdCard size={50} /> },
-    { title: 'IT Infrastructure Management', icon: <MdWifiCalling3 size={50} /> },
-    { title: 'Cloud Computing Solutions', icon: <SiCashapp size={50} /> },
-    { title: 'Cybersecurity Services', icon: <GiHumanPyramid size={50} /> }
+    { title: 'IT & Software Development', icon: <MdOutlineEngineering size={50} /> },
+    { title: 'Customer Support', icon: <RiCustomerService2Line size={50} /> },
+    { title: 'Administrative Services', icon: <TbHierarchy3 size={50} /> },
+    { title: 'IT Infrastructure Management', icon: <FaUniversity size={50} /> },
+    { title: 'Cloud Computing Solutions', icon: <GrCloudSoftware size={50} /> },
+    { title: 'Cybersecurity Services', icon: <GiCyberEye size={50} /> }
   ];
 
   return (

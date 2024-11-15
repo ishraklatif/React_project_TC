@@ -1,28 +1,34 @@
 import React from 'react';
 import { Card, Container, Row, Col } from 'react-bootstrap';
-import { AiOutlineCustomerService, AiOutlineDatabase } from "react-icons/ai";
-import { FaRegIdCard } from "react-icons/fa6";
-import { MdWifiCalling3 } from "react-icons/md";
+import { AiOutlineDatabase } from "react-icons/ai";
+import { GrDocumentStore } from "react-icons/gr";
 import { SiCashapp } from "react-icons/si";
 import { GiHumanPyramid } from "react-icons/gi";
 import Banner from '../components/Banner';
 import Contact from '../components/Contact';
-
+import { TbDatabaseCog } from "react-icons/tb";
+import { LuDatabaseBackup } from "react-icons/lu";
+import { BsTelephoneForward } from "react-icons/bs";
+import { FaUnity } from "react-icons/fa";
+import { GiHumanTarget } from "react-icons/gi";
+import { MdContentPasteSearch } from "react-icons/md";
+import { MdOutlineConnectingAirports } from "react-icons/md";
+import { GiArchiveResearch } from "react-icons/gi";
 
 function BPO() {
   const services = [
-    { title: 'Data Entry & Management', icon: <AiOutlineCustomerService size={50} /> },
+    { title: 'Data Entry & Management', icon: <TbDatabaseCog size={50} /> },
     { title: 'Data Cleansing & Validation', icon: <AiOutlineDatabase size={50} /> },
-    { title: 'Data Mining & Analysis', icon: <FaRegIdCard size={50} /> },
-    { title: 'Document Digitization', icon: <MdWifiCalling3 size={50} /> },
+    { title: 'Data Mining & Analysis', icon: <LuDatabaseBackup size={50} /> },
+    { title: 'Document Digitization', icon: <GrDocumentStore size={50} /> },
     { title: 'Finance & Accounting', icon: <SiCashapp size={50} /> },
     { title: 'Back Office Support', icon: <GiHumanPyramid size={50} /> },
-    { title: 'Telemarketing & Lead Generation', icon: <GiHumanPyramid size={50} /> },
-    { title: 'IT & Technical Support', icon: <GiHumanPyramid size={50} /> },
-    { title: 'HR & Recruitment Process Outsourcing(RPO)', icon: <GiHumanPyramid size={50} /> },
-    { title: 'Content Moderating & Management', icon: <GiHumanPyramid size={50} /> },
-    { title: 'Supply Chain Management', icon: <GiHumanPyramid size={50} /> },
-    { title: 'Research & Analytics', icon: <GiHumanPyramid size={50} /> }
+    { title: 'Telemarketing & Lead Generation', icon: <BsTelephoneForward size={50} /> },
+    { title: 'IT & Technical Support', icon: <FaUnity size={50} /> },
+    { title: 'HR & Recruitment Process Outsourcing(RPO)', icon: <GiHumanTarget size={50} /> },
+    { title: 'Content Moderating & Management', icon: <MdContentPasteSearch size={50} /> },
+    { title: 'Supply Chain Management', icon: <MdOutlineConnectingAirports size={50} /> },
+    { title: 'Research & Analytics', icon: <GiArchiveResearch size={50} /> }
   ];
 
   return (

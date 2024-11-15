@@ -1,28 +1,29 @@
 import React from 'react';
 import { Card, Container, Row, Col } from 'react-bootstrap';
-import { AiOutlineCustomerService, AiOutlineDatabase } from "react-icons/ai";
-import { FaRegIdCard } from "react-icons/fa6";
-import { MdWifiCalling3 } from "react-icons/md";
-import { SiCashapp } from "react-icons/si";
-import { GiHumanPyramid } from "react-icons/gi";
+import { IoShareSocialOutline } from "react-icons/io5";
+import { MdOutlineEmojiEvents } from "react-icons/md";
 import Banner from '../components/Banner';
 import Contact from '../components/Contact';
+import { TbBrandDiscord } from "react-icons/tb";
+import { HiSpeakerphone } from "react-icons/hi";
+import { TbEmergencyBed } from "react-icons/tb";
+import { TbBrandAdobe } from "react-icons/tb";
+import { FaBookReader } from "react-icons/fa";
+import { MdOutlineContactEmergency } from "react-icons/md";
+import { SlEnvolopeLetter } from "react-icons/sl";
 
 
 function PRM() {
   const services = [
-    { title: 'Data Entry & Management', icon: <AiOutlineCustomerService size={50} /> },
-    { title: 'Data Cleansing & Validation', icon: <AiOutlineDatabase size={50} /> },
-    { title: 'Data Mining & Analysis', icon: <FaRegIdCard size={50} /> },
-    { title: 'Document Digitization', icon: <MdWifiCalling3 size={50} /> },
-    { title: 'Finance & Accounting', icon: <SiCashapp size={50} /> },
-    { title: 'Back Office Support', icon: <GiHumanPyramid size={50} /> },
-    { title: 'Telemarketing & Lead Generation', icon: <GiHumanPyramid size={50} /> },
-    { title: 'IT & Technical Support', icon: <GiHumanPyramid size={50} /> },
-    { title: 'HR & Recruitment Process Outsourcing(RPO)', icon: <GiHumanPyramid size={50} /> },
-    { title: 'Content Moderating & Management', icon: <GiHumanPyramid size={50} /> },
-    { title: 'Supply Chain Management', icon: <GiHumanPyramid size={50} /> },
-    { title: 'Research & Analytics', icon: <GiHumanPyramid size={50} /> }
+    { title: 'Brand Positioning & Messaging', icon: <TbBrandDiscord size={50} /> },
+    { title: 'Reputation Management', icon: <HiSpeakerphone size={50} /> },
+    { title: 'Crisis Communication', icon: <TbEmergencyBed size={50} /> },
+    { title: 'Branding Strategy', icon: <TbBrandAdobe size={50} /> },
+    { title: 'Social Media PR', icon: <IoShareSocialOutline size={50} /> },
+    { title: 'Content Creation & Storytelling', icon: <FaBookReader size={50} /> },
+    { title: 'Event PR & Promotions', icon: <MdOutlineEmojiEvents size={50} /> },
+    { title: 'Crisis Management & Communication', icon: <MdOutlineContactEmergency size={50} /> },
+    { title: 'Internal Communication & Employee Engagement', icon: <SlEnvolopeLetter size={50} /> }
   ];
 
   return (
