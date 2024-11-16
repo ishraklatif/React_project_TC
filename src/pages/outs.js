@@ -21,7 +21,7 @@ function OUTS() {
     "Cybersecurity Services",
   ];
 
-  const [hoveredTitle, setHoveredTitle] = useState(rotateTextArray[0]);
+  const [hoveredTitle, setHoveredTitle] = useState("Outsourcing Services");
 
   // Services data
   const services = [
@@ -99,7 +99,7 @@ function OUTS() {
               <Card
                 className="outs-card text-center"
                 onMouseEnter={() => setHoveredTitle(service.title)}
-                onMouseLeave={() => setHoveredTitle(rotateTextArray[0])}
+                onMouseLeave={() => setHoveredTitle("Outsourcing Services")}
               >
                 <Card.Body>
                   <div

@@ -586,85 +586,89 @@ nav.navbar .nav-link:hover {
     padding: 1.5rem;
   }
 }
-/* Footer Section */
-footer {
-  background-color: #000000; /* Sleek dark background */
-  color: #d3d3d3; /* Soft light grey text */
-  padding: 1rem 0; /* Top and bottom padding */
-  font-family: 'Rationale', sans-serif;
-  border-top: 3px solid #000000; /* Accent border for separation */
-  position: relative; /* Ensure proper alignment */
-}
-
-/* Footer container to manage layout */
+/* General Footer Styling */
 .footer-container {
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-between; /* Space between left and right sections */
-  align-items: center; /* Center items vertically */
-  width: 100%; /* Full width for the footer */
-  padding: 0 2rem; /* Add spacing on the left and right edges */
-  box-sizing: border-box; /* Include padding in width calculation */
+  background-color: #000000; /* Dark background */
+  color: #f8f9fa; /* Light text for contrast */
+  padding: 20px 40px;
 }
 
-/* Left section styling */
-.footer-left {
-  flex: 1; /* Allow it to take up available space */
-  text-align: left; /* Align text to the left edge */
+.footer-left, .footer-right {
+  margin: 10px 0;
 }
 
-.footer-left p {
-  margin-bottom: 0.5rem; /* Add spacing below the text */
-  text-decoration: none;
-}
-
-.footer-left div a {
-  color: #d3d3d3; /* Default icon color */
-  font-size: 1.5rem; /* Larger icons */
-  margin: 0 0.8rem; /* Space between icons */
-  transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
-}
-
-.footer-left div a:hover {
-  color: #007bff; /* Highlight effect on hover */
-  transform: scale(1.2); /* Slight zoom effect */
-}
-
-.footer-left a {
-  color: #d3d3d3; /* Default link color */
-  text-decoration: none; /* Remove underline */
-  transition: color 0.3s ease; /* Smooth hover effect */
-}
-
-.footer-left a:hover {
-  color: #007bff; /* Highlight link on hover */
-}
-
-/* Right section styling */
-.footer-right {
-  flex: 1; /* Allow it to take up available space */
-  text-align: right; /* Align text to the right edge */
-}
-
+.footer-left p,
 .footer-right p {
-  margin-bottom: 0.5rem; /* Add spacing between lines */
+  margin: 5px 0;
+  line-height: 1.6;
 }
 
+/* Social Icons Styling */
+.social-icons a {
+  color: #f8f9fa;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
 
+.social-icons a:hover {
+  color: #17a2b8; /* Light blue hover effect */
+  transform: scale(1.1); /* Slight zoom on hover */
+}
 
-/* Responsive Footer */
+/* Logos Section */
+.footer-logos {
+  margin-top: 20px;
+}
+
+.footer-logo {
+  max-width: 80px;
+  margin: 0 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer-logo:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Responsive Styling */
 @media (max-width: 768px) {
   .footer-container {
-    flex-direction: column; /* Stack items vertically on smaller screens */
-    text-align: center; /* Center-align all text */
-    padding: 1rem; /* Reduce padding */
+    text-align: center;
+    padding: 20px;
   }
 
-  .footer-left,
-  .footer-right {
-    margin-bottom: 1rem; /* Add spacing between stacked sections */
-    text-align: center; /* Center-align text */
+  .footer-left, .footer-right {
+    margin-bottom: 20px;
+  }
+
+  .social-icons a {
+    margin: 0 10px;
+  }
+
+  .footer-logo {
+    max-width: 60px;
   }
 }
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 15px;
+  }
+
+  .footer-left p,
+  .footer-right p {
+    font-size: 14px;
+  }
+
+  .footer-logo {
+    max-width: 50px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
 
 
 /* ITES Section Container */
@@ -677,7 +681,7 @@ footer {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 2rem;
-  color: #333;
+  color: #000000;
 }
 
 /* Row and Column Adjustments for Layout */
@@ -990,7 +994,6 @@ footer {
     font-size: 0.55rem; /* Smallest font for very small screens */
   }
 }
-
 /* OUTS Section Container */
 .outs-section .outs-container {
   padding: 2rem;
@@ -1034,12 +1037,8 @@ footer {
 /* Card Hover Styling */
 .outs-section .outs-card:hover {
   background-color: #000000;
-}
-
-/* Reduce Contents on Hover */
-.outs-section .outs-card:hover .outs-card-body {
-  transform: scale(0.9); /* Scale down the contents */
-  transition: transform 0.3s ease;
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Icon Styling */
@@ -1047,11 +1046,10 @@ footer {
   margin-bottom: 1rem;
   font-size: 3rem; /* Consistent icon size */
   transition: color 0.3s ease;
-  color: inherit;
 }
 
 .outs-section .outs-card:hover .icon {
-  color: rgb(255, 255, 255);/* Icon color on hover */
+  color: #ffffff; /* Icon color on hover */
 }
 
 /* Title Styling */
@@ -1091,6 +1089,8 @@ footer {
 }
 
 /* Responsive Styling */
+
+/* Medium Devices (Tablets) */
 @media (max-width: 992px) {
   .outs-section .outs-col {
     flex: 0 0 50%;
@@ -1110,6 +1110,7 @@ footer {
   }
 }
 
+/* Small Devices (Mobile Phones) */
 @media (max-width: 768px) {
   .outs-section .outs-col {
     flex: 0 0 100%;
@@ -1129,6 +1130,7 @@ footer {
   }
 }
 
+/* Extra Small Devices */
 @media (max-width: 576px) {
   .outs-section .outs-container {
     padding: 1rem;
@@ -1151,6 +1153,7 @@ footer {
     font-size: 0.55rem; /* Smallest font for very small screens */
   }
 }
+
 
 /* Tech Section Container */
 .tech-section .tech-container {

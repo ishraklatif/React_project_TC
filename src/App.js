@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
 import Navbar from './components/NavbarComponent';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -11,6 +12,7 @@ import BPO from './pages/bpo';
 import OUTS from './pages/outs';
 import PRM from './pages/prm';
 import TECH from './pages/tech';
+import TERMS from './pages/terms';
 import './App.css';
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
         v7_relativeSplatPath: true,
       }}
     >
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -32,6 +35,7 @@ function App() {
         <Route path="/services/prm" element={<PRM />} /> {/* PRM Route */}
         <Route path="/services/tech" element={<TECH />} /> {/* TECH Route */}
         <Route path="/contact" element={<Contact />} />
+        <Route path="/terms" element={<TERMS />} />
       </Routes>
       <Footer />
     </Router>

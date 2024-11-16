@@ -30,7 +30,7 @@ function BPO() {
     "Research & Analytics",
   ];
 
-  const [hoveredTitle, setHoveredTitle] = useState(rotateTextArray[0]);
+  const [hoveredTitle, setHoveredTitle] = useState("BPO Services");
 
   // Define the services data
   const services = [
@@ -168,7 +168,7 @@ function BPO() {
               <Card
                 className="bpo-card text-center"
                 onMouseEnter={() => setHoveredTitle(service.title)}
-                onMouseLeave={() => setHoveredTitle(rotateTextArray[0])}
+                onMouseLeave={() => setHoveredTitle("BPO Services")}
               >
                 <Card.Body>
                   <div

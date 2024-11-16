@@ -1,5 +1,8 @@
-import React, { useState } from 'react'; 
-import { Card, Container, Row, Col } from 'react-bootstrap';
+import React, { useState } from "react";
+import { Card, Container, Row, Col } from "react-bootstrap";
+import Banner from "../components/Banner";
+import Contact from "../components/Contact";
+import Certificate from "../components/Certificate";
 import { IoShareSocialOutline } from "react-icons/io5";
 import { MdOutlineEmojiEvents } from "react-icons/md";
 import { TbBrandDiscord, TbEmergencyBed, TbBrandAdobe } from "react-icons/tb";
@@ -7,9 +10,6 @@ import { HiSpeakerphone } from "react-icons/hi";
 import { FaBookReader } from "react-icons/fa";
 import { MdOutlineContactEmergency } from "react-icons/md";
 import { SlEnvolopeLetter } from "react-icons/sl";
-import Banner from '../components/Banner';
-import Contact from '../components/Contact';
-import Certificate from '../components/Certificate';
 
 function PRM() {
   // Define the rotating text array for the Banner component
@@ -25,7 +25,7 @@ function PRM() {
     "Internal Communication & Employee Engagement",
   ];
 
-  const [hoveredTitle, setHoveredTitle] = useState(rotateTextArray[0]);
+  const [hoveredTitle, setHoveredTitle] = useState("PR Management Services");
 
   // Define PRM services data
   const services = [
@@ -123,7 +123,7 @@ function PRM() {
 
   return (
     <div className="prm-section">
-      {/* Pass the rotateTextArray and fixed title to the Banner */}
+      {/* Pass the rotating text array and fixed title to Banner */}
       <Banner rotateTextArray={rotateTextArray} fixedHeading="PR Management Services" />
       <Container className="prm-container my-5">
         <h2>Our PR Management Services</h2>
@@ -133,7 +133,7 @@ function PRM() {
               <Card
                 className="prm-card text-center"
                 onMouseEnter={() => setHoveredTitle(service.title)}
-                onMouseLeave={() => setHoveredTitle(rotateTextArray[0])}
+                onMouseLeave={() => setHoveredTitle("PR Management Services")}
               >
                 <Card.Body>
                   <div

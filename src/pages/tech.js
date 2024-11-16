@@ -11,7 +11,7 @@ import { GiCyberEye } from "react-icons/gi";
 import { GrHostMaintenance } from "react-icons/gr";
 
 function TECH() {
-  // Define an array for rotating text
+  // Rotating text array for the Banner component
   const rotateTextArray = [
     "Custom Software Development",
     "Web Development",
@@ -21,8 +21,9 @@ function TECH() {
     "IT Support & Maintenance",
   ];
 
-  const [hoveredTitle, setHoveredTitle] = useState(rotateTextArray[0]);
+  const [hoveredTitle, setHoveredTitle] = useState("Tech Services");
 
+  // Define the services data
   const services = [
     {
       title: "Custom Software Development",
@@ -88,7 +89,7 @@ function TECH() {
 
   return (
     <div className="tech-section">
-      {/* Pass the rotating text array and fixed title to Banner */}
+      {/* Pass the rotating text array and fixed heading to Banner */}
       <Banner
         rotateTextArray={rotateTextArray}
         fixedHeading="Tech Services"
@@ -101,7 +102,7 @@ function TECH() {
               <Card
                 className="tech-card text-center"
                 onMouseEnter={() => setHoveredTitle(service.title)}
-                onMouseLeave={() => setHoveredTitle(rotateTextArray[0])}
+                onMouseLeave={() => setHoveredTitle("Tech Services")}
               >
                 <Card.Body>
                   <div
