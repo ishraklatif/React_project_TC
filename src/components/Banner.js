@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
-export const Banner = React.memo(({ rotateTextArray }) => {
+export const Banner = React.memo(({ rotateTextArray, fixedHeading }) => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
@@ -14,7 +14,9 @@ export const Banner = React.memo(({ rotateTextArray }) => {
     const tick = () => {
       let i = loopNum % rotateTextArray.length;
       let fullText = rotateTextArray[i];
-      let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
+      let updatedText = isDeleting
+        ? fullText.substring(0, text.length - 1)
+        : fullText.substring(0, text.length + 1);
 
       setText(updatedText);
 
@@ -47,8 +49,14 @@ export const Banner = React.memo(({ rotateTextArray }) => {
             <TrackVisibility>
               {({ isVisible }) => (
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                  {/* Fixed heading added here */}
+                  <h1>{fixedHeading}</h1>
                   <h1>
-                    <span className="txt-rotate" data-period="1000" data-rotate={JSON.stringify(rotateTextArray)}>
+                    <span
+                      className="txt-rotate"
+                      data-period="1000"
+                      data-rotate={JSON.stringify(rotateTextArray)}
+                    >
                       <span className="wrap">{text}</span>
                     </span>
                   </h1>

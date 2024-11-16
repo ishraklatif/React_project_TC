@@ -27,7 +27,7 @@ function ITES() {
       icon: <AiOutlineCustomerService size={50} />,
       hoverIcon: <AiOutlineCustomerService size={70} color="#ffffff" />,
       description: [
-        'Efficient, 24/7 customer service. We handle inquiries via phone, email, and chat, ensuring prompt and professional responses.'
+        'Efficient, 24/7 customer service. We handle inquiries via phone, email, and chat, ensuring prompt and professional responses.',
       ],
     },
     {
@@ -35,7 +35,7 @@ function ITES() {
       icon: <AiOutlineDatabase size={50} />,
       hoverIcon: <AiOutlineDatabase size={70} color="#ffffff" />,
       description: [
-        'Streamline your data management. Our team organizes, processes, and secures large datasets, helping you make informed decisions.'
+        'Streamline your data management. Our team organizes, processes, and secures large datasets, helping you make informed decisions.',
       ],
     },
     {
@@ -43,7 +43,7 @@ function ITES() {
       icon: <FaRegIdCard size={50} />,
       hoverIcon: <FaRegIdCard size={70} color="#ffffff" />,
       description: [
-        'Simplify payroll. From processing salaries to managing benefits, we take care of it all, so you can focus on growing your business.'
+        'Simplify payroll. From processing salaries to managing benefits, we take care of it all, so you can focus on growing your business.',
       ],
     },
     {
@@ -51,7 +51,7 @@ function ITES() {
       icon: <MdWifiCalling3 size={50} />,
       hoverIcon: <MdWifiCalling3 size={70} color="#ffffff" />,
       description: [
-        'Boost your sales. Our dedicated telemarketing team effectively promotes your products and services to increase conversions.'
+        'Boost your sales. Our dedicated telemarketing team effectively promotes your products and services to increase conversions.',
       ],
     },
     {
@@ -59,7 +59,7 @@ function ITES() {
       icon: <SiCashapp size={50} />,
       hoverIcon: <SiCashapp size={70} color="#ffffff" />,
       description: [
-        'Keep your finances in check. We manage bookkeeping, audits, and compliance, so you donâ€™t have to.'
+        'Keep your finances in check. We manage bookkeeping, audits, and compliance, so you don’t have to.',
       ],
     },
     {
@@ -67,15 +67,18 @@ function ITES() {
       icon: <GiHumanPyramid size={50} />,
       hoverIcon: <GiHumanPyramid size={70} color="#ffffff" />,
       description: [
-        'Build a strong team. We handle recruitment, training, and performance management, ensuring you get the best talent.'
+        'Build a strong team. We handle recruitment, training, and performance management, ensuring you get the best talent.',
       ],
     },
   ];
 
   return (
     <div className="ites-section">
-      {/* Pass the rotateTextArray to the Banner component */}
-      <Banner rotateTextArray={rotateTextArray} />
+      {/* Pass the rotateTextArray and fixedHeading to the Banner component */}
+      <Banner
+        rotateTextArray={rotateTextArray}
+        fixedHeading="IT Enabled Services (ITES)"
+      />
       <Container className="ites-container my-5">
         <h2>ITES Services</h2>
         <Row className="ites-row">

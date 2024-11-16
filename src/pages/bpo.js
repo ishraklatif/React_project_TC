@@ -14,7 +14,7 @@ import Contact from '../components/Contact';
 import Certificate from '../components/Certificate';
 
 function BPO() {
-  // Define an array for rotating text
+  // Define the rotating text array for the Banner component
   const rotateTextArray = [
     "Data Entry & Management",
     "Data Cleansing & Validation",
@@ -32,135 +32,136 @@ function BPO() {
 
   const [hoveredTitle, setHoveredTitle] = useState(rotateTextArray[0]);
 
+  // Define the services data
   const services = [
     {
-      title: 'Data Entry & Management',
+      title: "Data Entry & Management",
       icon: <TbDatabaseCog size={50} />,
       hoverIcon: <TbDatabaseCog size={70} color="#ffffff" />,
       description: [
-        'Efficient data organization and management.',
-        'Database updates and integrity checks.',
-        'Custom data entry solutions.',
+        "Efficient data organization and management.",
+        "Database updates and integrity checks.",
+        "Custom data entry solutions.",
       ],
     },
     {
-      title: 'Data Cleansing & Validation',
+      title: "Data Cleansing & Validation",
       icon: <AiOutlineDatabase size={50} />,
       hoverIcon: <AiOutlineDatabase size={70} color="#ffffff" />,
       description: [
-        'Ensure data accuracy and consistency.',
-        'Remove redundant or outdated entries.',
-        'Standardize large datasets.',
+        "Ensure data accuracy and consistency.",
+        "Remove redundant or outdated entries.",
+        "Standardize large datasets.",
       ],
     },
     {
-      title: 'Data Mining & Analysis',
+      title: "Data Mining & Analysis",
       icon: <LuDatabaseBackup size={50} />,
       hoverIcon: <LuDatabaseBackup size={70} color="#ffffff" />,
       description: [
-        'Extract valuable insights from raw data.',
-        'Market trends and customer behavior analysis.',
-        'Custom analytics reporting.',
+        "Extract valuable insights from raw data.",
+        "Market trends and customer behavior analysis.",
+        "Custom analytics reporting.",
       ],
     },
     {
-      title: 'Document Digitization',
+      title: "Document Digitization",
       icon: <GrDocumentStore size={50} />,
       hoverIcon: <GrDocumentStore size={70} color="#ffffff" />,
       description: [
-        'Convert physical documents into digital formats.',
-        'OCR-enabled scanning for searchable documents.',
-        'Secure document storage and access.',
+        "Convert physical documents into digital formats.",
+        "OCR-enabled scanning for searchable documents.",
+        "Secure document storage and access.",
       ],
     },
     {
-      title: 'Finance & Accounting',
+      title: "Finance & Accounting",
       icon: <SiCashapp size={50} />,
       hoverIcon: <SiCashapp size={70} color="#ffffff" />,
       description: [
-        'Bookkeeping and financial statement preparation.',
-        'Tax filing and compliance support.',
-        'Budgeting and financial planning.',
+        "Bookkeeping and financial statement preparation.",
+        "Tax filing and compliance support.",
+        "Budgeting and financial planning.",
       ],
     },
     {
-      title: 'Back Office Support',
+      title: "Back Office Support",
       icon: <GiHumanPyramid size={50} />,
       hoverIcon: <GiHumanPyramid size={70} color="#ffffff" />,
       description: [
-        'Administrative and operational tasks.',
-        'Database management and report generation.',
-        'Streamlined back-office processes.',
+        "Administrative and operational tasks.",
+        "Database management and report generation.",
+        "Streamlined back-office processes.",
       ],
     },
     {
-      title: 'Telemarketing & Lead Generation',
+      title: "Telemarketing & Lead Generation",
       icon: <BsTelephoneForward size={50} />,
       hoverIcon: <BsTelephoneForward size={70} color="#ffffff" />,
       description: [
-        'Effective outreach campaigns.',
-        'Targeted lead generation strategies.',
-        'Customer follow-ups and surveys.',
+        "Effective outreach campaigns.",
+        "Targeted lead generation strategies.",
+        "Customer follow-ups and surveys.",
       ],
     },
     {
-      title: 'IT & Technical Support',
+      title: "IT & Technical Support",
       icon: <FaUnity size={50} />,
       hoverIcon: <FaUnity size={70} color="#ffffff" />,
       description: [
-        'Hardware and software troubleshooting.',
-        '24/7 IT helpdesk services.',
-        'System performance monitoring.',
+        "Hardware and software troubleshooting.",
+        "24/7 IT helpdesk services.",
+        "System performance monitoring.",
       ],
     },
     {
-      title: 'HR & Recruitment Process Outsourcing (RPO)',
+      title: "HR & Recruitment Process Outsourcing (RPO)",
       icon: <GiHumanTarget size={50} />,
       hoverIcon: <GiHumanTarget size={70} color="#ffffff" />,
       description: [
-        'End-to-end recruitment support.',
-        'Employee onboarding and training.',
-        'Performance appraisals and retention strategies.',
+        "End-to-end recruitment support.",
+        "Employee onboarding and training.",
+        "Performance appraisals and retention strategies.",
       ],
     },
     {
-      title: 'Content Moderating & Management',
+      title: "Content Moderating & Management",
       icon: <MdContentPasteSearch size={50} />,
       hoverIcon: <MdContentPasteSearch size={70} color="#ffffff" />,
       description: [
-        'Ensure content compliance with guidelines.',
-        'Manage user-generated content effectively.',
-        'Real-time moderation and feedback.',
+        "Ensure content compliance with guidelines.",
+        "Manage user-generated content effectively.",
+        "Real-time moderation and feedback.",
       ],
     },
     {
-      title: 'Supply Chain Management',
+      title: "Supply Chain Management",
       icon: <MdOutlineConnectingAirports size={50} />,
       hoverIcon: <MdOutlineConnectingAirports size={70} color="#ffffff" />,
       description: [
-        'Optimize logistics and delivery timelines.',
-        'Vendor and inventory management.',
-        'Real-time tracking and reporting.',
+        "Optimize logistics and delivery timelines.",
+        "Vendor and inventory management.",
+        "Real-time tracking and reporting.",
       ],
     },
     {
-      title: 'Research & Analytics',
+      title: "Research & Analytics",
       icon: <GiArchiveResearch size={50} />,
       hoverIcon: <GiArchiveResearch size={70} color="#ffffff" />,
       description: [
-        'In-depth market research.',
-        'Custom analytics dashboards.',
-        'Competitive benchmarking.',
+        "In-depth market research.",
+        "Custom analytics dashboards.",
+        "Competitive benchmarking.",
       ],
     },
   ];
 
   return (
     <div className="bpo-section">
-      {/* Pass the rotateTextArray and hoveredTitle to the Banner */}
-      <Banner rotateTextArray={rotateTextArray} rotateText={hoveredTitle} />
+      {/* Pass the rotating text array and a fixed title to Banner */}
+      <Banner rotateTextArray={rotateTextArray} fixedHeading="BPO Services" />
       <Container className="bpo-container my-5">
-        <h2>BPO Services</h2>
+        <h2>Our BPO Services</h2>
         <Row className="bpo-row">
           {services.map((service, index) => (
             <Col md={4} key={index} className="mb-4">

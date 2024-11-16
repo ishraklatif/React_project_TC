@@ -1,14 +1,14 @@
-import React, { useState } from 'react'; 
-import { Card, Container, Row, Col } from 'react-bootstrap';
-import Banner from '../components/Banner';
-import Contact from '../components/Contact';
+import React, { useState } from "react";
+import { Card, Container, Row, Col } from "react-bootstrap";
+import Banner from "../components/Banner";
+import Contact from "../components/Contact";
+import Certificate from "../components/Certificate";
 import { SiPaloaltosoftware } from "react-icons/si";
 import { CgWebsite } from "react-icons/cg";
 import { FaAppStoreIos } from "react-icons/fa";
 import { TbCloudComputing } from "react-icons/tb";
 import { GiCyberEye } from "react-icons/gi";
 import { GrHostMaintenance } from "react-icons/gr";
-import Certificate from '../components/Certificate';
 
 function TECH() {
   // Define an array for rotating text
@@ -25,73 +25,76 @@ function TECH() {
 
   const services = [
     {
-      title: 'Custom Software Development',
+      title: "Custom Software Development",
       icon: <SiPaloaltosoftware size={50} />,
-      hoverIcon: <SiPaloaltosoftware size={70} color="#ffffff" />, // Larger and white on hover
+      hoverIcon: <SiPaloaltosoftware size={70} color="#ffffff" />,
       description: [
-        'Customized Solutions',
-        'End-to-End Development',
-        'Software Architecture',
+        "Customized Solutions",
+        "End-to-End Development",
+        "Software Architecture",
       ],
     },
     {
-      title: 'Web Development',
+      title: "Web Development",
       icon: <CgWebsite size={50} />,
       hoverIcon: <CgWebsite size={70} color="#ffffff" />,
       description: [
-        'Responsive Website Design',
-        'E-commerce Solutions',
-        'Web Application Development',
+        "Responsive Website Design",
+        "E-commerce Solutions",
+        "Web Application Development",
       ],
     },
     {
-      title: 'Mobile App Development',
+      title: "Mobile App Development",
       icon: <FaAppStoreIos size={50} />,
       hoverIcon: <FaAppStoreIos size={70} color="#ffffff" />,
       description: [
-        'iOS & Android Development',
-        'Cross-Platform Solutions',
-        'App Maintenance & Support',
+        "iOS & Android Development",
+        "Cross-Platform Solutions",
+        "App Maintenance & Support",
       ],
     },
     {
-      title: 'Cloud Computing & Infrastructure',
+      title: "Cloud Computing & Infrastructure",
       icon: <TbCloudComputing size={50} />,
       hoverIcon: <TbCloudComputing size={70} color="#ffffff" />,
       description: [
-        'Cloud Migration',
-        'Cloud Management',
-        'Infrastructure as a Service (IaaS)',
+        "Cloud Migration",
+        "Cloud Management",
+        "Infrastructure as a Service (IaaS)",
       ],
     },
     {
-      title: 'Cybersecurity Solutions',
+      title: "Cybersecurity Solutions",
       icon: <GiCyberEye size={50} />,
       hoverIcon: <GiCyberEye size={70} color="#ffffff" />,
       description: [
-        'Threat Detection',
-        'Vulnerability Management',
-        'Incident Response',
+        "Threat Detection",
+        "Vulnerability Management",
+        "Incident Response",
       ],
     },
     {
-      title: 'IT Support & Maintenance',
+      title: "IT Support & Maintenance",
       icon: <GrHostMaintenance size={50} />,
       hoverIcon: <GrHostMaintenance size={70} color="#ffffff" />,
       description: [
-        '24/7 Technical Support',
-        'Network Security & Monitoring',
-        'System Troubleshooting',
+        "24/7 Technical Support",
+        "Network Security & Monitoring",
+        "System Troubleshooting",
       ],
     },
   ];
 
   return (
     <div className="tech-section">
-      {/* Pass both the rotateTextArray and hoveredTitle to the Banner */}
-      <Banner rotateTextArray={rotateTextArray} rotateText={hoveredTitle} />
+      {/* Pass the rotating text array and fixed title to Banner */}
+      <Banner
+        rotateTextArray={rotateTextArray}
+        fixedHeading="Tech Services"
+      />
       <Container className="tech-container my-5">
-        <h2>Tech Services</h2>
+        <h2>Our Tech Services</h2>
         <Row className="tech-row">
           {services.map((service, index) => (
             <Col md={4} key={index} className="mb-4">
@@ -108,7 +111,9 @@ function TECH() {
                       transition: "color 0.3s ease",
                     }}
                   >
-                    {hoveredTitle === service.title ? service.hoverIcon : service.icon}
+                    {hoveredTitle === service.title
+                      ? service.hoverIcon
+                      : service.icon}
                   </div>
                   <Card.Title className="tech-card-title">{service.title}</Card.Title>
                   {hoveredTitle === service.title && (
