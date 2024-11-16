@@ -248,162 +248,118 @@ nav.navbar .nav-link:hover {
       transform: translateY(-20px);
     }
   }
-  /* Styling for the container_about section */
-.container_about {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin: 2rem 0;
-  padding: 2rem;
-
-  border-radius: 12px;
-  background-color: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.container_about:hover{
-  transform: translateY(-5px);
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
-  background-color: black; /* Changes background to black on hover */
-}
-.container_about:hover h2,
-.container_about:hover h3,
-.container_about:hover p {
-  color: white; /* Changes all text to white on hover */
-}
-.container_about1:hover{
-  transform: translateY(-5px);
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
-  background-color: black; /* Changes background to black on hover */
-}
-.container_about1:hover h2,
-.container_about1:hover h3,
-.container_about1:hover p {
-  color: white; /* Changes all text to white on hover */
+ /* About Page Parent Class */
+.about-page .custom-about-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 0 15px; /* Add padding for smaller screens */
 }
 
-.container_about .container_text {
-  max-width: 80%;
+.about-page .custom-about-title {
   text-align: center;
-}
-
-.container_about h2 {
-  color: #000000;
-  font-size: 2.2rem;
-  margin-bottom: 0.5rem;
-}
-
-.container_about h3 {
-  color: #000000;
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
-}
-
-.container_about p {
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
   color: #333;
-  font-size: 1rem;
-  line-height: 1.6;
 }
 
-/* Styling for the container_about1 section */
-.container_about1 {
+.about-page .custom-about-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin: 2rem 0;
-  padding: 1.5rem;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
 }
 
-.container_about1 .container_text {
-  max-width: 60%;
-  padding-right: 1.5rem;
+.about-page .custom-about-row-reverse {
+  flex-direction: row-reverse; /* Reverse image and text alignment */
 }
 
-.container_about1 h2 {
-  color: #333;
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+.about-page .custom-about-text h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #007bff;
 }
 
-.container_about1 h3 {
-  color: #000000;
+.about-page .custom-about-text h3 {
   font-size: 1.5rem;
+  color: #333;
   margin-bottom: 1rem;
 }
 
-.container_about1 p {
-  color: #555;
+.about-page .custom-about-text p {
   font-size: 1rem;
   line-height: 1.6;
+  color: #555;
 }
 
-/* Styling for images in container_about1 */
-.container_image {
-  max-width: 35%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.about-page .custom-about-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive styling */
+/* Responsive Styling */
+
+/* Medium Devices (Tablets) */
 @media (max-width: 992px) {
-  .container_about1,
-  .container_about {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
+  .about-page .custom-about-container {
+    padding: 0 10px; /* Reduce padding for smaller screens */
   }
 
-  .container_about1 .container_text,
-  .container_about .container_text {
-    max-width: 100%;
+  .about-page .custom-about-row {
+    flex-direction: column; /* Stack rows vertically */
     text-align: center;
-    padding-right: 0;
   }
 
-  .container_about h2, .container_about1 h2 {
-    font-size: 1.8rem;
+  .about-page .custom-about-row-reverse {
+    flex-direction: column; /* Stack rows vertically */
   }
 
-  .container_about h3, .container_about1 h3 {
+  .about-page .custom-about-text h2 {
+    font-size: 1.6rem; /* Reduce heading size */
+  }
+
+  .about-page .custom-about-text h3 {
     font-size: 1.3rem;
   }
 
-  .container_image {
-    max-width: 80%;
-    margin-top: 1rem;
+  .about-page .custom-about-text p {
+    font-size: 0.9rem; /* Adjust paragraph font size */
+  }
+
+  .about-page .custom-about-image img {
+    margin-bottom: 20px; /* Add spacing below images */
   }
 }
 
+/* Small Devices (Mobile Phones) */
 @media (max-width: 576px) {
-  .container {
-    padding: 1rem;
+  .about-page .custom-about-title {
+    font-size: 2rem; /* Reduce title size */
   }
 
-  .container_about, .container_about1 {
-    padding: 0.5rem;
+  .about-page .custom-about-text h2 {
+    font-size: 1.4rem;
   }
 
-  .container_about .container_text h2, .container_about1 .container_text h2 {
-    font-size: 1.5rem;
+  .about-page .custom-about-text h3 {
+    font-size: 1.2rem;
   }
 
-  .container_about .container_text h3, .container_about1 .container_text h3 {
-    font-size: 1.1rem;
+  .about-page .custom-about-text p {
+    font-size: 0.85rem;
   }
 
-  .container_about .container_text p, .container_about1 .container_text p {
-    font-size: 0.9rem;
+  .about-page .custom-about-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 
-  .container_image {
-    max-width: 100%;
+  .about-page .custom-about-row {
+    margin-bottom: 1.5rem; /* Reduce spacing between rows */
   }
 }
+
 
 /* Services Section */
 .container {
@@ -630,73 +586,86 @@ nav.navbar .nav-link:hover {
     padding: 1.5rem;
   }
 }
-
 /* Footer Section */
 footer {
   background-color: #000000; /* Sleek dark background */
   color: #d3d3d3; /* Soft light grey text */
-  padding: 1rem 1rem 0; /* Reduced padding for less height */
-  text-align: center;
+  padding: 1rem 0; /* Top and bottom padding */
   font-family: 'Rationale', sans-serif;
   border-top: 3px solid #000000; /* Accent border for separation */
+  position: relative; /* Ensure proper alignment */
 }
 
-footer:hover {
-  color: #ffffff; /* Highlight effect on hover */
-  transform: translateY(-0.5px);
-  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15);
+/* Footer container to manage layout */
+.footer-container {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between left and right sections */
+  align-items: center; /* Center items vertically */
+  width: 100%; /* Full width for the footer */
+  padding: 0 2rem; /* Add spacing on the left and right edges */
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
-/* Footer Container Styling */
-footer .text-center {
-  max-width: 800px;
-  margin: 0 auto;
+/* Left section styling */
+.footer-left {
+  flex: 1; /* Allow it to take up available space */
+  text-align: left; /* Align text to the left edge */
 }
 
-/* Footer Text Styling */
-footer p {
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  line-height: 1.5;
+.footer-left p {
+  margin-bottom: 0.5rem; /* Add spacing below the text */
+  text-decoration: none;
 }
 
-/* Social Media Icons */
-footer div a {
-  color: #d3d3d3;
+.footer-left div a {
+  color: #d3d3d3; /* Default icon color */
   font-size: 1.5rem; /* Larger icons */
-  margin: 0 0.8rem;
-  transition: color 0.3s ease, transform 0.3s ease;
+  margin: 0 0.8rem; /* Space between icons */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
 }
 
-footer div a:hover {
+.footer-left div a:hover {
   color: #007bff; /* Highlight effect on hover */
   transform: scale(1.2); /* Slight zoom effect */
 }
 
+.footer-left a {
+  color: #d3d3d3; /* Default link color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.footer-left a:hover {
+  color: #007bff; /* Highlight link on hover */
+}
+
+/* Right section styling */
+.footer-right {
+  flex: 1; /* Allow it to take up available space */
+  text-align: right; /* Align text to the right edge */
+}
+
+.footer-right p {
+  margin-bottom: 0.5rem; /* Add spacing between lines */
+}
+
+
+
 /* Responsive Footer */
 @media (max-width: 768px) {
-  footer {
-    padding: 1rem 0; /* Adjusted padding for smaller screens */
+  .footer-container {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    text-align: center; /* Center-align all text */
+    padding: 1rem; /* Reduce padding */
   }
 
-  footer p {
-    font-size: 0.9rem;
-  }
-
-  footer div a {
-    font-size: 1.2rem; /* Adjust icon size */
+  .footer-left,
+  .footer-right {
+    margin-bottom: 1rem; /* Add spacing between stacked sections */
+    text-align: center; /* Center-align text */
   }
 }
 
-@media (max-width: 576px) {
-  footer {
-    padding: 0.5rem 0; /* Further reduced padding for very small screens */
-  }
-
-  footer div a {
-    margin: 0 0.5rem; /* Reduce spacing between icons */
-  }
-}
 
 /* ITES Section Container */
 .ites-section .ites-container {
@@ -1344,7 +1313,7 @@ footer div a:hover {
 }
 
 
-/*  PRM Section */
+/* PRM Section */
 .prm-section .prm-container {
   padding: 2rem;
   text-align: center;
@@ -1357,7 +1326,7 @@ footer div a:hover {
   color: #333;
 }
 
-/* Row and Column adjustments for layout */
+/* Row and Column Adjustments for Layout */
 .prm-section .prm-row {
   display: flex;
   flex-wrap: wrap;
@@ -1369,31 +1338,44 @@ footer div a:hover {
   max-width: 33.333%;
 }
 
-/* Card Styling with Hover Effect */
+/* Card Styling */
 .prm-section .prm-card {
   border: none;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
   text-align: center;
   background-color: white;
   overflow: hidden;
   text-decoration: none;
   color: inherit;
-  padding-top: 1.5rem;
+  padding: 1.5rem;
+  position: relative;
+  height: 250px; /* Consistent height */
 }
 
+/* Card Hover Styling */
 .prm-section .prm-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
   background-color: #000000;
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Reduce Contents on Hover */
+.prm-section .prm-card:hover .prm-card-body {
+  transform: scale(0.9); /* Scale down the contents */
+  transition: transform 0.3s ease;
 }
 
 /* Icon Styling */
 .prm-section .prm-card .icon {
   margin-bottom: 1rem;
+  font-size: 3rem; /* Consistent icon size */
+  transition: color 0.3s ease;
 }
 
-
+.prm-section .prm-card:hover .icon {
+  color: #ffffff; /* Icon color on hover */
+}
 
 /* Title Styling */
 .prm-section .prm-card-title {
@@ -1409,7 +1391,30 @@ footer div a:hover {
   color: #ffffff;
 }
 
+/* Description Styling */
+.prm-section .prm-card-description {
+  margin-top: 1rem;
+  font-size: 0.7rem; /* Smaller font size */
+  color: #ffffff;
+  opacity: 0;
+  list-style-type: disc; /* Add bullets */
+  text-align: left; /* Align text to the left */
+  padding-left: 1rem; /* Indent for bullets */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.prm-section .prm-card:hover .prm-card-description {
+  opacity: 1; /* Make description visible on hover */
+}
+
+.prm-section .prm-card-description li {
+  margin-bottom: 0.5rem; /* Space between list items */
+  color: #ffffff; /* White text for list items */
+}
+
 /* Responsive Styling */
+
+/* Medium Devices (Tablets) */
 @media (max-width: 992px) {
   .prm-section .prm-col {
     flex: 0 0 50%;
@@ -1423,8 +1428,13 @@ footer div a:hover {
   .prm-section .prm-card-title {
     font-size: 1.15rem;
   }
+
+  .prm-section .prm-card-description {
+    font-size: 0.65rem; /* Even smaller font for medium screens */
+  }
 }
 
+/* Small Devices (Mobile Phones) */
 @media (max-width: 768px) {
   .prm-section .prm-col {
     flex: 0 0 100%;
@@ -1438,8 +1448,13 @@ footer div a:hover {
   .prm-section .prm-card-title {
     font-size: 1.1rem;
   }
+
+  .prm-section .prm-card-description {
+    font-size: 0.6rem; /* Smaller font for smaller screens */
+  }
 }
 
+/* Extra Small Devices */
 @media (max-width: 576px) {
   .prm-section .prm-container {
     padding: 1rem;
@@ -1449,11 +1464,111 @@ footer div a:hover {
     font-size: 1.5rem;
   }
 
-  .prm-section .prm-card-body {
+  .prm-section .prm-card {
+    height: 180px; /* Adjust for smaller screens */
     padding: 1rem;
   }
 
   .prm-section .prm-card-title {
     font-size: 1rem;
+  }
+
+  .prm-section .prm-card-description {
+    font-size: 0.55rem; /* Smallest font for very small screens */
+  }
+}
+
+
+/* Parent container for certificate section */
+.custom-certificate-container {
+  padding: 1rem 0; /* Top and bottom padding */
+  background-color: #ffffff; /* White background */
+  text-align: center;
+  border-radius: 0.2rem;
+  width: 100%; /* Ensure full width */
+  margin: 0 auto; /* Center the container */
+}
+
+/* Card styling */
+.custom-certificate-container .certificate-card {
+  border: none; /* Remove default border */
+  border-radius: 2px; /* Rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  background-color: #ffffff; /* White card background */
+  padding: 1rem; /* Add padding around the content */
+}
+
+.custom-certificate-container .certificate-card:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+  background-color: #ececec; /* Slightly darker background on hover */
+}
+
+/* Image styling */
+.custom-certificate-container .certificate-img {
+  height: 100px; /* Larger height */
+  width: auto; /* Adjust width to keep aspect ratio */
+  max-width: 100%; /* Prevent overflow */
+  object-fit: contain; /* Ensure the image is fully visible within the area */
+  margin: 0 auto; /* Center the image */
+  display: block; /* Ensure the image is centered */
+}
+
+/* Card content styling */
+.custom-certificate-container .certificate-info {
+  padding: 1rem;
+  text-align: center;
+}
+
+.custom-certificate-container .certificate-info .card-title {
+  font-size: 1.5rem; /* Font size for titles */
+  font-weight: bold; /* Bold titles */
+  color: #333333; /* Dark grey for text */
+  font-family: "Rationale", sans-serif; /* Custom font */
+  margin: 0.5rem 0;
+  transition: color 0.3s ease; /* Smooth hover effect for color */
+}
+
+.custom-certificate-container .certificate-info .card-title:hover {
+  color: #007bff; /* Change to Bootstrap blue on hover */
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .custom-certificate-container {
+    padding: 1rem;
+  }
+
+  .custom-certificate-container .certificate-card {
+    margin-bottom: 1.5rem; /* Add spacing between cards */
+  }
+
+  .custom-certificate-container .certificate-info .card-title {
+    font-size: 1.25rem; /* Smaller font size on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-certificate-container .certificate-img {
+    height: 80px; /* Adjust image height for smaller screens */
+  }
+
+  .custom-certificate-container .certificate-info .card-title {
+    font-size: 1.1rem; /* Adjust title size for small screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-certificate-container {
+    padding: 0.5rem;
+  }
+
+  .custom-certificate-container .certificate-img {
+    height: 70px; /* Smaller image height for very small screens */
+  }
+
+  .custom-certificate-container .certificate-info .card-title {
+    font-size: 1rem; /* Smaller font size for extra small screens */
   }
 }

@@ -11,7 +11,7 @@ import BPO from './pages/bpo';
 import OUTS from './pages/outs';
 import PRM from './pages/prm';
 import TECH from './pages/tech';
-import './App2.css';
+import './App.css';
 
 function App() {
   return (
