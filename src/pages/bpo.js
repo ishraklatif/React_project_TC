@@ -11,6 +11,7 @@ import { FaUnity } from "react-icons/fa";
 import { MdContentPasteSearch, MdOutlineConnectingAirports } from "react-icons/md";
 import Banner from '../components/Banner';
 import Contact from '../components/Contact';
+import Certificate from '../components/Certificate';
 
 function BPO() {
   // Define an array for rotating text
@@ -192,6 +193,7 @@ function BPO() {
           ))}
         </Row>
       </Container>
+      <Certificate />
       <Contact />
     </div>
   );

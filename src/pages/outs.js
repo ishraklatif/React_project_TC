@@ -8,6 +8,7 @@ import { MdOutlineEngineering } from "react-icons/md";
 import { RiCustomerService2Line } from "react-icons/ri";
 import Banner from '../components/Banner';
 import Contact from '../components/Contact';
+import Certificate from '../components/Certificate';
 
 function OUTS() {
   // Define the rotateTextArray to pass to Banner
@@ -123,6 +124,7 @@ function OUTS() {
           ))}
         </Row>
       </Container>
+      <Certificate />
       <Contact />
     </div>
   );

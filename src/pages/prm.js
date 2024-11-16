@@ -9,6 +9,7 @@ import { MdOutlineContactEmergency } from "react-icons/md";
 import { SlEnvolopeLetter } from "react-icons/sl";
 import Banner from '../components/Banner';
 import Contact from '../components/Contact';
+import Certificate from '../components/Certificate';
 
 function PRM() {
   // Define the text array for Banner component
@@ -69,6 +70,7 @@ function PRM() {
           ))}
         </Row>
       </Container>
+      <Certificate />
       <Contact />
     </div>
   );

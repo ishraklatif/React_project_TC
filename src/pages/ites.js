@@ -7,6 +7,7 @@ import { SiCashapp } from "react-icons/si";
 import { GiHumanPyramid } from "react-icons/gi";
 import Banner from '../components/Banner';
 import Contact from '../components/Contact';
+import Certificate from '../components/Certificate';
 
 function ITES() {
   const [hoveredTitle, setHoveredTitle] = useState("IT Enabled Services (ITES)");
@@ -58,7 +59,7 @@ function ITES() {
       icon: <SiCashapp size={50} />,
       hoverIcon: <SiCashapp size={70} color="#ffffff" />,
       description: [
-        'Keep your finances in check. We manage bookkeeping, audits, and compliance, so you don’t have to.'
+        'Keep your finances in check. We manage bookkeeping, audits, and compliance, so you donâ€™t have to.'
       ],
     },
     {
@@ -109,6 +110,7 @@ function ITES() {
           ))}
         </Row>
       </Container>
+      <Certificate />
       <Contact />
     </div>
   );

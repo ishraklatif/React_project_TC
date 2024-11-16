@@ -8,6 +8,7 @@ import { FaAppStoreIos } from "react-icons/fa";
 import { TbCloudComputing } from "react-icons/tb";
 import { GiCyberEye } from "react-icons/gi";
 import { GrHostMaintenance } from "react-icons/gr";
+import Certificate from '../components/Certificate';
 
 function TECH() {
   // Define an array for rotating text
@@ -123,6 +124,7 @@ function TECH() {
           ))}
         </Row>
       </Container>
+      <Certificate />
       <Contact />
     </div>
   );

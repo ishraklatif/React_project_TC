@@ -48,7 +48,7 @@ export const Banner = React.memo(({ rotateTextArray }) => {
               {({ isVisible }) => (
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <h1>
-                    <span className="txt-rotate" dataPeriod="1000" data-rotate={JSON.stringify(rotateTextArray)}>
+                    <span className="txt-rotate" data-period="1000" data-rotate={JSON.stringify(rotateTextArray)}>
                       <span className="wrap">{text}</span>
                     </span>
                   </h1>

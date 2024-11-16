@@ -4,7 +4,7 @@ import Banner from '../components/Banner';
 import About from './About';
 import Services from '../components/Services';
 import Contact from '../components/Contact';
-
+import Certificate from '../components/Certificate';
 function Home() {
   const toRotate = useMemo(() => [
     "IT Enabled Services (ITES)", 
@@ -19,6 +19,7 @@ function Home() {
       {/* Pass the toRotate array as a prop */}
       <Banner rotateTextArray={toRotate} />
       <About />
+      <Certificate />
       <Services />
       <Contact />
     </div>

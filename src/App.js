@@ -11,21 +11,26 @@ import BPO from './pages/bpo';
 import OUTS from './pages/outs';
 import PRM from './pages/prm';
 import TECH from './pages/tech';
-import './App.css';
+import './App2.css';
 
 function App() {
   return (
-    <Router>
+    <Router
+      future={{
+        v7_startTransition: true,
+        v7_relativeSplatPath: true,
+      }}
+    >
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/services/ites" element={<ITES />} />  {/* ITES Route */}
-        <Route path="/services/bpo" element={<BPO />} />  {/* ITES Route */}
-        <Route path="/services/outs" element={<OUTS />} />  {/* ITES Route */}
-        <Route path="/services/prm" element={<PRM />} />  {/* ITES Route */}
-        <Route path="/services/tech" element={<TECH />} />  {/* ITES Route */}
+        <Route path="/services/ites" element={<ITES />} /> {/* ITES Route */}
+        <Route path="/services/bpo" element={<BPO />} /> {/* BPO Route */}
+        <Route path="/services/outs" element={<OUTS />} /> {/* OUTS Route */}
+        <Route path="/services/prm" element={<PRM />} /> {/* PRM Route */}
+        <Route path="/services/tech" element={<TECH />} /> {/* TECH Route */}
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />

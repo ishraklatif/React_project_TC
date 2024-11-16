@@ -1,6 +1,7 @@
 import React from 'react';
 import headerImg from "../assets/img/website-design.jpg";
 import headerImg2 from "../assets/img/OIP.jpeg";
+import Certificate from '../components/Certificate';
 function About() {
   return (
     <div className="container my-5">
@@ -33,6 +34,7 @@ function About() {
       </div>
       <img className="container_image" src={headerImg2} alt="alt2" />
     </div>
+    <Certificate />
     </div>
   );
 }
